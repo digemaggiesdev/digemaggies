@@ -1,0 +1,53 @@
+# ==============================
+# Dig'em Aggies Website Routing
+# ==============================
+
+# Serve index.html by default
+DirectoryIndex index.html
+
+# Enable URL rewriting
+RewriteEngine On
+RewriteBase /
+
+
+# --------------------------------
+# Force HTTPS and remove www
+# --------------------------------
+# Redirect all HTTP and www traffic to https://tamu-nabc.com
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://tamu-nabc.com%{REQUEST_URI} [L,R=301]
+
+# --------------------------------
+# Skip rewriting for assets and media
+# --------------------------------
+RewriteCond %{REQUEST_URI} ^/assets/ [NC,OR]
+RewriteCond %{REQUEST_URI} \.(jpg|jpeg|png|gif|webp|svg|css|js|ico|woff|woff2|ttf|eot|mp4|mov|pdf)$ [NC]
+RewriteRule ^ - [L]
+
+# --------------------------------
+# Skip existing files and directories
+# --------------------------------
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# --------------------------------
+# Dynamic clean URL routing
+# --------------------------------
+# Example: /about → /pages/aboutpage/aboutindex.html
+RewriteCond %{DOCUMENT_ROOT}/pages/$1page/$1index.html -f
+RewriteRule ^([\w-]+)/?$ /pages/$1page/$1index.html [L]
+
+# Optional: redirect singular /sponsor → /sponsors
+RewriteRule ^sponsor/?$ /sponsors [R=301,L]
+
+# --------------------------------
+# Default route for home page
+# --------------------------------
+RewriteRule ^$ /index.html [L]
+
+# --------------------------------
+# SPA-like 404 fallback
+# --------------------------------
+ErrorDocument 404 /index.html

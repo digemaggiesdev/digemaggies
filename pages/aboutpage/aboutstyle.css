@@ -1,0 +1,461 @@
+html{
+  overflow-y: scroll;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ----------------- VARIABLES ----------------- */
+:root {
+  --accent: black;
+  --bg: #fafafa;
+  --card: #fff;
+  --maxw: 1000px;
+}
+
+/* ----------------- GLOBAL ----------------- */
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  color: #222;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+/* ----------------- ABOUT HEADER ----------------- */
+.about-header {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.about-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* ----------------- CORE VALUES ----------------- */
+.core-values {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.core-values h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+/* Grid layout for value cards */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual value cards */
+.value-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(30,30,30,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.value-card h3 {
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.value-card p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Icon spacing */
+.value-card i {
+  margin-right: 0.5rem;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 820px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .core-values h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ----------------- Faculty Advisor Section ----------------- */
+.faculty-advisor {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.faculty-advisor h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.advisor-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(30,30,30,0.05);
+  text-align: center;
+  opacity: 0;             /* hidden initially for animation */
+  transform: translateY(20px); /* slide up on load */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.advisor-card img {
+  width: 60%;
+  height: 60%;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 1rem;
+  border: 3px solid black;
+}
+
+.advisor-card h3 {
+  color: black;
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+}
+
+.advisor-card .department {
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.advisor-card .bio {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+/* ========== Leadership Section ========== */
+
+.leadership {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.leadership h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.leadership-grid {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  grid-template-columns: repeat(3, 220px); /* 3 columns for top row */
+  grid-auto-rows: auto;
+}
+
+/* ---- Medium screens: diamond layout ---- */
+.leadership-grid .leader-card:nth-child(4) {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.leadership-grid .leader-card:nth-child(5) {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  justify-self: center;
+}
+
+/* ---- Large screens: all in one row ---- */
+@media (min-width: 1200px) {
+  .leadership-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .leadership-grid .leader-card:nth-child(4),
+  .leadership-grid .leader-card:nth-child(5) {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: auto;
+  }
+}
+
+/* ---- Small screens: single column ---- */
+@media (max-width: 799px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .leadership-grid .leader-card:nth-child(4),
+  .leadership-grid .leader-card:nth-child(5) {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: auto;
+  }
+}
+
+.leader-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(30,30,30,0.05);
+  text-align: center;
+  transform: translateY(20px); /* initial Y offset */
+  opacity: 0;                 /* initial hidden */
+  filter: blur(4px);          /* initial blur */
+  transition: transform 0.6s ease, opacity 0.6s ease, filter 0.6s ease;
+}
+
+.leader-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);            /* blur cleared when visible */
+}
+
+.leader-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
+}
+
+.leader-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-card:hover::after {
+  opacity: 1;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.leader-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 1rem;
+  border: 3px solid black;
+}
+
+.leadership-grid .leader-card:nth-child(4) img {
+  object-position: top;
+}
+
+.leader-card h3 {
+  color: black;
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.leader-card .position,
+.leader-card .class-major {
+  color: #555;
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.leader-card .linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #0e76a8;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.leader-card .linkedin-link:hover {
+  text-decoration: underline;
+}
+
+/* ----------------- Sub-Teams Section ----------------- */
+.sub-teams {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.sub-teams h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+/* Grid layout: 2 rows of 3 by default */
+.sub-teams-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Individual sub-team cards */
+.sub-team-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(30,30,30,0.05);
+  text-align: center;
+  opacity: 0; /* hidden initially for animation */
+  transform: translateY(20px); /* start slightly below */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Sub-team card hover effect */
+.sub-team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Sub-team images */
+.sub-team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 1rem;
+  border: 3px solid black;
+}
+
+/* Sub-team name and role */
+.sub-team-card h3 {
+  color: black;
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.sub-team-card p {
+  color: #555;
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive: stack in 1 column on small screens */
+@media (max-width: 800px) {
+  .sub-teams-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== ABOUT HERO SECTION ===== */
+.about-hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;        
+  padding: 0;        
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.container .about-hero{
+  max-width: none;
+  padding: 0;
+}
+
+.about-hero .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;   
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/team/tour.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.1);
+  transition: transform 1.5s ease-out;
+  z-index: 0;
+}
+
+.about-hero.visible .hero-bg {
+  transform: scale(1);
+}
+
+.about-hero:hover .hero-bg {
+  transform: scale(1.15);
+}
+
+.about-hero .hero-content {
+  position: relative;
+  max-width: 75vw;
+  z-index: 1;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  animation: fadeUp 1s ease-out;
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 60vh;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+}
