@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       const data = {
-        access_key: "ceb6686f-a864-4a6f-9465-fa830fcdb87c",
+        access_key: "470a65df-bb10-4b57-90e1-e2f9750e6e74",
         name: form.name.value,
         email: form.email.value,
         company: form.company.value,
