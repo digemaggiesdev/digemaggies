@@ -16,7 +16,16 @@ RewriteBase /
 # Redirect all HTTP and www traffic to https://digemaggies.org
 RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
-RewriteRule ^ https://digemaggies.org%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://digemaggies.org%{REQUEST_URI} [L,R=301,NE]
+
+
+# --------------------------------
+# Canonicalize direct file URLs to clean paths
+# --------------------------------
+# Example: /pages/sponsorpage/sponsorindex.html -> /sponsor
+RewriteRule ^pages/([A-Za-z0-9-]+)page/([A-Za-z0-9-]+)\.html$ /$1 [R=301,L,NE]
+RewriteRule ^pages/([A-Za-z0-9-]+)page/?$ /$1 [R=301,L,NE]
+
 
 # --------------------------------
 # Skip rewriting for assets and media
@@ -25,6 +34,7 @@ RewriteCond %{REQUEST_URI} ^/assets/ [NC,OR]
 RewriteCond %{REQUEST_URI} \.(jpg|jpeg|png|gif|webp|svg|css|js|ico|woff|woff2|ttf|eot|mp4|mov|pdf)$ [NC]
 RewriteRule ^ - [L]
 
+
 # --------------------------------
 # Skip existing files and directories
 # --------------------------------
@@ -32,20 +42,24 @@ RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# --------------------------------
-# Dynamic clean URL routing
-# --------------------------------
-# Example: /about → /pages/aboutpage/aboutindex.html
-RewriteCond %{DOCUMENT_ROOT}/pages/$1page/$1index.html -f
-RewriteRule ^([\w-]+)/?$ /pages/$1page/$1index.html [L]
 
-# Optional: redirect singular /sponsor → /sponsors
-RewriteRule ^sponsor/?$ /sponsors [R=301,L]
+# --------------------------------
+# Clean URL routes
+# --------------------------------
+RewriteRule ^about/?$ /pages/aboutpage/aboutindex.html [L]
+RewriteRule ^contact/?$ /pages/contactpage/contactindex.html [L]
+RewriteRule ^sponsor/?$ /pages/sponsorpage/sponsorindex.html [L]
+
+
+# Optional trailing slash or legacy alias support
+RewriteRule ^sponsors/?$ /sponsor [R=301,L]
+
 
 # --------------------------------
 # Default route for home page
 # --------------------------------
-RewriteRule ^$ /index.html [L]
+RewriteRule ^/?$ /index.html [L]
+
 
 # --------------------------------
 # SPA-like 404 fallback
