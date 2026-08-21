@@ -1,5 +1,5 @@
 {
-  "name": "digem-aggies-tamu",
+  "name": "digem-aggies",
   "version": "1.0.0",
   "description": "Repository for the official website of **Dig’em Aggies**, a student organization at **Texas A&M University** dedicated to design, development, and outreach in tunnel boring technology.",
   "main": ".tmpdiag.js",
@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tamu-nabc/digem-aggies-tamu.git"
+    "url": "git+https://github.com/digemaggiesdev/digemaggies.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/tamu-nabc/digem-aggies-tamu/issues"
+    "url": "https://github.com/digemaggiesdev/digemaggies/issues"
   },
-  "homepage": "https://github.com/tamu-nabc/digem-aggies-tamu#readme",
+  "homepage": "https://github.com/digemaggiesdev/digemaggies#readme",
   "dependencies": {
     "playwright": "^1.62.1"
   }
