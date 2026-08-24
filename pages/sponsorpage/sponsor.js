@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const raised = 19600;
+    const raised = 1000;
     const goal = 30000;
     goalTextEl.textContent = `of $${goal.toLocaleString()} goal`;
 
