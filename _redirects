@@ -1,0 +1,6 @@
+/pages/aboutpage/aboutindex.html /about 301
+/pages/contactpage/contactindex.html /contact 301
+/pages/sponsorpage/sponsorindex.html /sponsor 301
+/about /pages/aboutpage/aboutindex.html 200
+/contact /pages/contactpage/contactindex.html 200
+/sponsor /pages/sponsorpage/sponsorindex.html 200
