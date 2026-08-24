@@ -603,6 +603,45 @@ footer {
   transform: scale(1.05);
 }
 
+/* ===== FAQ Section ===== */
+.faq-section {
+  background: #fff;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  border-top: 3px solid var(--maroon);
+  padding-top: 1rem;
+}
+
+.faq-item h3 {
+  color: var(--maroon);
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.faq-item a {
+  color: var(--maroon);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Scroll animation */
 .competition-text.visible,
 .competition-image.visible {
