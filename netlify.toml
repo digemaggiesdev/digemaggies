@@ -1,2 +1,22 @@
 [build]
   publish = "."
+
+[[redirects]]
+  from = "/about"
+  to = "/pages/aboutpage/aboutindex.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/pages/contactpage/contactindex.html"
+  status = 200
+
+[[redirects]]
+  from = "/sponsor"
+  to = "/pages/sponsorpage/sponsorindex.html"
+  status = 200
+
+[[redirects]]
+  from = "/sponsors"
+  to = "/sponsor"
+  status = 301
