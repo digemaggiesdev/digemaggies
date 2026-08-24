@@ -5,18 +5,22 @@
   from = "/about"
   to = "/pages/aboutpage/aboutindex.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/contact"
   to = "/pages/contactpage/contactindex.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/sponsor"
   to = "/pages/sponsorpage/sponsorindex.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/sponsors"
-  to = "/sponsor"
+  to = "/pages/sponsorpage/sponsorindex.html"
   status = 301
+  force = true
