@@ -23,8 +23,10 @@ RewriteRule ^ https://digemaggies.org%{REQUEST_URI} [L,R=301,NE]
 # Canonicalize direct file URLs to clean paths
 # --------------------------------
 # Example: /pages/sponsorpage/sponsorindex.html -> /sponsor
-RewriteRule ^pages/([A-Za-z0-9-]+)page/([A-Za-z0-9-]+)\.html$ /$1 [R=301,L,NE]
-RewriteRule ^pages/([A-Za-z0-9-]+)page/?$ /$1 [R=301,L,NE]
+RewriteRule ^pages/aboutpage/aboutindex\.html$ /about [R=301,L,NE]
+RewriteRule ^pages/contactpage/contactindex\.html$ /contact [R=301,L,NE]
+RewriteRule ^pages/sponsorpage/sponsorindex\.html$ /sponsor [R=301,L,NE]
+RewriteRule ^pages/(about|contact|sponsor)page/?$ /$1 [R=301,L,NE]
 
 
 # --------------------------------
