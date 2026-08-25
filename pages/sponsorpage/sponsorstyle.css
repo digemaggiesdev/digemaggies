@@ -238,17 +238,57 @@ nav {
 .sponsor-tier-card.maroon .tier-bar { background: linear-gradient(90deg, #2e0000, #4a0000); }
 
 .sponsor-tier-card.gold {
-  background: #fff;
-  border: 2px solid #d4af37;
+  background: linear-gradient(180deg, #fffdf4 0%, #fff 72%);
+  border: 3px solid #d4af37;
+  box-shadow: 0 16px 38px rgba(180, 140, 20, 0.34), 0 0 22px rgba(241, 196, 15, 0.16);
+  z-index: 1;
+  animation: goldReveal 0.7s ease both, goldGlow 3.2s 0.9s ease-in-out infinite;
 }
 
 .sponsor-tier-card.gold h2 {
   color: #b59410;
+  font-size: 1.6rem;
+}
+
+.sponsor-tier-card.gold::before {
+  height: 8px;
+  background: linear-gradient(90deg, #b88a00, #f1c40f, #b88a00);
+}
+
+.sponsor-tier-card.gold .sponsor-logo {
+  border-width: 2px;
+  border-color: #d4af37;
+  box-shadow: 0 6px 16px rgba(180, 140, 20, 0.18);
+}
+
+.sponsor-tier-card.gold:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 44px rgba(180, 140, 20, 0.42), 0 0 28px rgba(241, 196, 15, 0.22);
+}
+
+@keyframes goldReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes goldGlow {
+  0%, 100% { box-shadow: 0 16px 38px rgba(180, 140, 20, 0.34), 0 0 22px rgba(241, 196, 15, 0.16); }
+  50% { box-shadow: 0 20px 46px rgba(180, 140, 20, 0.46), 0 0 32px rgba(241, 196, 15, 0.26); }
 }
 
 .sponsor-tier-card.silver {
   background: #fff;
   border-color: #b5b5b5;
+}
+
+.sponsor-tier-card.silver::before {
+  background: linear-gradient(90deg, #9f9f9f, #dedede, #9f9f9f);
 }
 
 .sponsor-tier-card.silver h2 {
@@ -302,54 +342,6 @@ nav {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.sponsor-tier-card.gold .sponsor-logo img {
-  display: block;
-  animation: pulse 3s ease-in-out infinite;
-  animation-play-state: paused;
-}
-
-.sponsor-tier-card.gold .sponsor-logo {
-  position: relative;
-  overflow: hidden;
-}
-
-.sponsor-tier-card.gold .sponsor-logo::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.8) 50%,
-    rgba(255,255,255,0) 100%
-  );
-  transform: skewX(-20deg);
-  pointer-events: none;
-  animation: shimmer 4s linear infinite;
-  animation-play-state: paused;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); filter: brightness(1); }
-  50%     { transform: scale(1.08); filter: brightness(1.15); }
-}
-
-@keyframes shimmer {
-  0%   { left: -75%; }
-  100% { left: 125%; }
-}
-
-.sponsor-tier-card.gold.in-view .sponsor-logo img {
-  animation-play-state: running;
-}
-
-.sponsor-tier-card.gold.in-view .sponsor-logo::after {
-  animation-play-state: running;
-}
-
 .sponsor-tier-card.gold .sponsor-logo {
   box-shadow: 0 4px 12px rgba(0,0,0,0.12), 0 0 12px rgba(212,175,55,0.06);
   border-color: rgba(212,175,55,0.9);
@@ -366,7 +358,7 @@ nav {
   color: #7a7a7a;
 }
 
-/* Silver logos use same animations, no shimmer */
+/* Silver logos use a restrained grayscale treatment */
 .sponsor-tier-card.silver .sponsor-logo {
   position: relative;
   overflow: hidden;
@@ -1047,6 +1039,10 @@ footer a:hover {
 
 @media (prefers-reduced-motion: reduce) {
   .sponsor-tier-card {
+    animation: none;
+  }
+
+  .sponsor-tier-card.gold {
     animation: none;
   }
 

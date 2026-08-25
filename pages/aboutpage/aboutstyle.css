@@ -11,7 +11,7 @@ html, body {
 /* ----------------- VARIABLES ----------------- */
 :root {
   --accent: #500000;
-  --gold: #f4b41a;
+  --gold: #8d2f2a;
   --bg: #fafafa;
   --card: #fff;
   --maxw: 1000px;
@@ -24,6 +24,23 @@ body {
   color: #222;
   background: var(--bg);
   overflow-x: hidden;
+  background-image: linear-gradient(rgba(80, 0, 0, 0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(80, 0, 0, 0.018) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.about-kicker {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.55rem;
+  text-transform: uppercase;
+}
+
+.about-kicker::before {
+  content: "//";
+  color: #8d2f2a;
+  margin-right: 0.45rem;
 }
 
 /* ----------------- ABOUT HEADER ----------------- */
@@ -46,46 +63,83 @@ body {
 /* ----------------- CORE VALUES ----------------- */
 .core-values {
   text-align: center;
-  margin: 2rem 0;
+  margin: 4rem 0 5rem;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: linear-gradient(135deg, #fff 0%, #fff 72%, #fbf5ed 100%);
+  border-top: 4px solid var(--accent);
+  border-bottom: 1px solid #ebe2d8;
 }
 
 .core-values h2 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
   color: var(--accent);
   margin-bottom: 1.5rem;
+}
+
+.core-values h2::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  margin: 0.7rem auto 0;
+  background: var(--accent);
 }
 
 /* Grid layout for value cards */
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 /* Individual value cards */
 .value-card {
   background: var(--card);
   padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(30,30,30,0.05);
+  border: 1px solid #ded6ce;
+  border-top: 4px solid var(--accent);
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(30,30,30,0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card::before {
+  content: "";
+  position: absolute;
+  inset: auto 1rem 0 auto;
+  width: 2rem;
+  height: 2px;
+  background: #ded6ce;
+}
+
+.value-card:nth-child(3n + 2) {
+  border-top-color: #756d65;
+}
+
+.value-card:nth-child(3n + 3) {
+  border-top-color: #8d2f2a;
 }
 
 .value-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  border-color: #b9aea3;
+  box-shadow: 0 16px 28px rgba(80, 0, 0, 0.12);
 }
 
 .value-card h3 {
   color: var(--accent);
   margin-bottom: 0.8rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
 }
 
 .value-card p {
-  color: #444;
+  color: #555;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Icon spacing */
@@ -101,6 +155,21 @@ body {
 
   .core-values h2 {
     font-size: 1.5rem;
+  }
+
+  .values-grid,
+  .sub-teams-grid {
+    gap: 1rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .values-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -121,8 +190,10 @@ body {
   margin: 0 auto;
   background: var(--card);
   padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(30,30,30,0.05);
+  border: 1px solid #ebe2d8;
+  border-top: 4px solid var(--accent);
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(30,30,30,0.06);
   text-align: center;
   opacity: 1;
   transform: none;
@@ -130,17 +201,17 @@ body {
 }
 
 .advisor-card img {
-  width: 60%;
-  height: 60%;
-  border-radius: 16px;
+  width: min(280px, 100%);
+  height: 240px;
+  border-radius: 6px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 1rem;
-  border: 3px solid var(--gold);
+  border: 3px solid #ded6ce;
 }
 
 .advisor-card h3 {
-  color: black;
+  color: var(--accent);
   margin-bottom: 0.3rem;
   font-size: 1.4rem;
 }
@@ -219,14 +290,22 @@ body {
     grid-row: auto;
     justify-self: auto;
   }
+
+  .leader-card,
+  .sub-team-card,
+  .value-card {
+    padding: 1.25rem;
+  }
 }
 
 .leader-card {
   background: var(--card);
   padding: 1.5rem;
-  border-radius: 16px;
+  border: 1px solid #ebe2d8;
+  border-radius: 6px;
   box-shadow: 0 6px 20px rgba(30,30,30,0.05);
   text-align: center;
+  position: relative;
   transform: none;
   opacity: 1;
   filter: none;
@@ -241,7 +320,7 @@ body {
 
 .leader-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 16px 30px rgba(80, 0, 0, 0.13);
   filter: brightness(1.05);
 }
 
@@ -263,11 +342,11 @@ body {
 .leader-card img {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
+  border-radius: 6px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 1rem;
-  border: 3px solid var(--gold);
+  border: 3px solid #ded6ce;
 }
 
 .leadership-grid .leader-card:nth-child(4) img {
@@ -275,9 +354,10 @@ body {
 }
 
 .leader-card h3 {
-  color: black;
+  color: var(--accent);
   margin-bottom: 0.3rem;
   font-size: 1.2rem;
+  letter-spacing: 0.01em;
 }
 
 .leader-card .position,
@@ -325,8 +405,9 @@ body {
 .sub-team-card {
   background: var(--card);
   padding: 1.5rem;
+  border: 1px solid #ebe2d8;
   border-radius: 6px;
-  box-shadow: 0 6px 20px rgba(30,30,30,0.05);
+  box-shadow: 0 8px 20px rgba(30,30,30,0.06);
   text-align: center;
   opacity: 1;
   transform: none;
@@ -335,26 +416,28 @@ body {
 
 /* Sub-team card hover effect */
 .sub-team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  border-color: #b9aea3;
+  box-shadow: 0 16px 28px rgba(80, 0, 0, 0.12);
 }
 
 /* Sub-team images */
 .sub-team-card img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 6px;
   object-fit: cover;
   object-position: center;
   margin-bottom: 1rem;
-  border: 3px solid var(--gold);
+  border: 3px solid #ded6ce;
 }
 
 /* Sub-team name and role */
 .sub-team-card h3 {
-  color: black;
+  color: var(--accent);
   margin-bottom: 0.3rem;
   font-size: 1.2rem;
+  letter-spacing: 0.01em;
 }
 
 .sub-team-card p {
@@ -470,5 +553,221 @@ body {
 
   .about-hero p {
     font-size: 1rem;
+  }
+}
+
+/* ===== DISTINCT ABOUT SECTION COMPOSITIONS ===== */
+.core-values,
+.faculty-advisor,
+.leadership,
+.sub-teams {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.core-values {
+  background: #fff;
+  border: 0;
+  border-left: 6px solid var(--accent);
+  text-align: left;
+}
+
+.core-values h2::after {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.values-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.value-card {
+  min-height: 190px;
+  border: 0;
+  border-top: 1px solid #ded6ce;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1.4rem 1.25rem 1.25rem 0;
+}
+
+.value-card::before {
+  inset: 0 auto auto 0;
+  width: 2.2rem;
+  height: 3px;
+  background: var(--accent);
+}
+
+.value-card:nth-child(3n + 2)::before {
+  background: #756d65;
+}
+
+.value-card:nth-child(3n + 3)::before {
+  background: #8d2f2a;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: none;
+}
+
+.faculty-advisor {
+  padding: clamp(2rem, 5vw, 4rem);
+  color: #fff;
+  background: var(--accent);
+  text-align: left;
+}
+
+.faculty-advisor .about-kicker,
+.faculty-advisor h2,
+.faculty-advisor .department,
+.faculty-advisor .bio {
+  color: #fff;
+}
+
+.faculty-advisor h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.advisor-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  text-align: left;
+}
+
+.advisor-card img {
+  grid-row: span 3;
+  width: 220px;
+  height: 220px;
+  border: 0;
+  border-radius: 4px;
+  filter: grayscale(15%);
+}
+
+.advisor-card h3 {
+  color: #fff;
+  margin: 0;
+}
+
+.advisor-card .department {
+  color: #e7d7d2;
+}
+
+.advisor-card .bio {
+  color: #f7eeeb;
+  margin: 0;
+}
+
+.leadership {
+  padding: 1rem 0 4rem;
+}
+
+.leadership h2,
+.sub-teams h2 {
+  text-align: left;
+}
+
+.leadership-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.leadership-grid .leader-card:nth-child(4),
+.leadership-grid .leader-card:nth-child(5) {
+  grid-column: auto;
+  grid-row: auto;
+  justify-self: auto;
+}
+
+.leader-card {
+  padding: 1rem;
+  border: 0;
+  border-top: 3px solid var(--accent);
+  border-radius: 0;
+  box-shadow: none;
+  background: #f3eee8;
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(80, 0, 0, 0.1);
+}
+
+.leader-card img {
+  width: 100%;
+  height: 150px;
+  border: 0;
+  border-radius: 2px;
+}
+
+.sub-teams {
+  padding: clamp(2rem, 5vw, 4rem);
+  background: #f3eee8;
+  text-align: left;
+}
+
+.sub-teams-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.sub-team-card {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ded6ce;
+  border-radius: 2px;
+  box-shadow: none;
+  text-align: left;
+}
+
+.sub-team-card img {
+  width: 100%;
+  height: 150px;
+  display: block;
+  margin: 0 0 1rem;
+  border: 0;
+  border-radius: 2px;
+}
+
+.sub-team-card h3,
+.sub-team-card p {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .values-grid,
+  .leadership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sub-teams-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .values-grid,
+  .leadership-grid,
+  .sub-teams-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advisor-card {
+    grid-template-columns: 1fr;
+  }
+
+  .advisor-card img {
+    grid-row: auto;
+    width: 100%;
+    height: 210px;
   }
 }
