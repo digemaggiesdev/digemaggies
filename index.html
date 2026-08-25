@@ -109,6 +109,7 @@
   <link rel="stylesheet" href="/homestyle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <script src="/home.js" defer></script>
+  <script src="/js/menu-toggle.js" defer></script>
   <script src="/transition.js" defer></script>
   <script src="/typewriter.js" defer></script>
   <script src="pages/sponsorpage/sponsor.js" defer></script>
@@ -122,16 +123,16 @@
           <a href="/"><img src="/assets/logo/Dig_Em_Logo.png" alt="Dig 'Em Aggies logo" /></a>
         </div>
 
-        <button class="menu-toggle" aria-label="Toggle navigation">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <div class="nav-links" aria-label="Main navigation">
-          <a href="/about">About</a>
-          <a href="/sponsor">Sponsor</a>
-          <a href="/contact">Contact</a>
+        <div class="nav-links" id="main-navigation" aria-label="Main navigation">
+          <a href="/pages/aboutpage/aboutindex.html">About</a>
+          <a href="/pages/sponsorpage/sponsorindex.html">Sponsor</a>
+          <a href="/pages/contactpage/contactindex.html">Contact</a>
         </div>
       </nav>
     </div>
@@ -151,8 +152,11 @@
         We are Dig ‘Em Aggies, a student-led engineering team dedicated to advancing tunneling technology through innovation, teamwork, and real-world design challenges.
       </p>
       <div class="cta">
-        <a class="btn btn-small" href="/about">
-          Learn about our team!
+        <a class="btn btn-small" href="/pages/aboutpage/aboutindex.html">
+          Meet the Team <span aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn-small btn-secondary" href="/pages/sponsorpage/sponsorindex.html">
+          Sponsor the Build <span aria-hidden="true">→</span>
         </a>
       </div>
     </div>
@@ -173,7 +177,7 @@
         </p>
       </div>
       <div class="mission-image">
-        <img src="/assets/team/presentationPhoto.JPG" alt="Our Mission Image">
+        <img src="/assets/team/presentationPhoto.JPG" alt="Dig 'Em Aggies students presenting their tunnel boring machine" loading="lazy">
       </div>
     </div>
   </section>
@@ -197,6 +201,15 @@
     </div>
   </section>
 
+  <section class="card recruitment-section" id="join">
+    <div>
+      <p class="eyebrow">Build what comes next</p>
+      <h2>Bring your major underground.</h2>
+      <p>From mechanical design to business and software, there is a place for students who want to solve a real engineering problem with a committed team.</p>
+    </div>
+    <a class="btn" href="/pages/contactpage/contactindex.html">Get involved <span aria-hidden="true">→</span></a>
+  </section>
+
   <section class="card competition-section">
     <div class="competition-container">
       <div class="competition-text">
@@ -206,7 +219,7 @@
         </p>
       </div>
       <div class="competition-image">
-        <img src="/assets/team/tour.JPG" alt="Not-a-Boring Competition Image">
+        <img src="/assets/team/tour.JPG" alt="Dig 'Em Aggies team members touring the competition site" loading="lazy">
       </div>
     </div>
   </section>
@@ -225,7 +238,7 @@
         </div>
         <div class="faq-item">
           <h3>How can I support Dig 'Em Aggies?</h3>
-          <p>Organizations can support the team through sponsorships and partnerships. <a href="/sponsor">View sponsorship opportunities</a> or <a href="/contact">contact our team</a>.</p>
+          <p>Organizations can support the team through sponsorships and partnerships. <a href="/pages/sponsorpage/sponsorindex.html">View sponsorship opportunities</a> or <a href="/pages/contactpage/contactindex.html">contact our team</a>.</p>
         </div>
       </div>
     </div>
@@ -236,23 +249,23 @@
       <p>We’re grateful for our amazing sponsors who support innovation and student engineering at Texas A&M.</p>
       <div class="sponsor-gallery">
         <div class="sponsor-track">
-          <img src="/assets/sponsorship_images/CVEN_DEPT.png" alt="Sponsor 1">
-          <img src="/assets/sponsorship_images/Dovetail.jpg" alt="Sponsor 2">
-          <img src="/assets/sponsorship_images/garver.png" alt="Sponsor 3">
-          <img src="/assets/sponsorship_images/masterbuilders.png" alt="Sponsor 4">
-          <img src="/assets/sponsorship_images/onshape.png" alt="Sponsor 5">
-          <img src="/assets/sponsorship_images/spinks_solution_llc.png" alt="Sponsor 6">
-          <img src="/assets/sponsorship_images/zachary_coorporation.jpg" alt="Sponsor 7">
-          <img src="/assets/sponsorship_images/Metzler_Family.png" alt="Sponsor 8">
+          <img src="/assets/sponsorship_images/CVEN_DEPT.png" alt="Texas A&M Civil and Environmental Engineering sponsor logo" loading="lazy">
+          <img src="/assets/sponsorship_images/Dovetail.jpg" alt="Dovetail sponsor logo" loading="lazy">
+          <img src="/assets/sponsorship_images/garver.png" alt="Garver sponsor logo" loading="lazy">
+          <img src="/assets/sponsorship_images/masterbuilders.png" alt="Master Builders sponsor logo" loading="lazy">
+          <img src="/assets/sponsorship_images/onshape.png" alt="Onshape sponsor logo" loading="lazy">
+          <img src="/assets/sponsorship_images/spinks_solution_llc.png" alt="Spinks Solutions sponsor logo" loading="lazy">
+          <img src="/assets/sponsorship_images/zachary_coorporation.jpg" alt="Zachry Corporation sponsor logo" loading="lazy">
+          <img src="/assets/sponsorship_images/Metzler_Family.png" alt="Metzler Family sponsor logo" loading="lazy">
           <!-- duplicate logos for infinite scroll effect -->
-          <img src="/assets/sponsorship_images/CVEN_DEPT.png" alt="Sponsor 1 duplicate">
-          <img src="/assets/sponsorship_images/Dovetail.jpg" alt="Sponsor 2 duplicate">
-          <img src="/assets/sponsorship_images/garver.png" alt="Sponsor 3 duplicate">
-          <img src="/assets/sponsorship_images/masterbuilders.png" alt="Sponsor 4 duplicate">
-          <img src="/assets/sponsorship_images/onshape.png" alt="Sponsor 5 duplicate">
-          <img src="/assets/sponsorship_images/spinks_solution_llc.png" alt="Sponsor 6 duplicate">
-          <img src="/assets/sponsorship_images/zachary_coorporation.jpg" alt="Sponsor 7 duplicate">
-          <img src="/assets/sponsorship_images/Metzler_Family.png" alt="Sponsor 8 duplicate">
+          <img src="/assets/sponsorship_images/CVEN_DEPT.png" alt="" aria-hidden="true">
+          <img src="/assets/sponsorship_images/Dovetail.jpg" alt="" aria-hidden="true">
+          <img src="/assets/sponsorship_images/garver.png" alt="" aria-hidden="true">
+          <img src="/assets/sponsorship_images/masterbuilders.png" alt="" aria-hidden="true">
+          <img src="/assets/sponsorship_images/onshape.png" alt="" aria-hidden="true">
+          <img src="/assets/sponsorship_images/spinks_solution_llc.png" alt="" aria-hidden="true">
+          <img src="/assets/sponsorship_images/zachary_coorporation.jpg" alt="" aria-hidden="true">
+          <img src="/assets/sponsorship_images/Metzler_Family.png" alt="" aria-hidden="true">
         </div>
       </div>
       <p style="font-size:0.95rem;color:var(--muted);margin-top:1rem;">
@@ -276,10 +289,10 @@
     <div class="footer-right">
       <h3>Follow Us</h3>
       <div class="social-links">
-        <a href="https://www.instagram.com/dig.em.aggies/" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/dig.em.aggies/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://www.linkedin.com/company/tamu-dig-em-aggies/" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/company/tamu-dig-em-aggies/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
       </div>

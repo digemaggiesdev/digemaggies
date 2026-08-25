@@ -10,7 +10,8 @@ html, body {
 
 /* ----------------- VARIABLES ----------------- */
 :root {
-  --accent: black;
+  --accent: #500000;
+  --gold: #f4b41a;
   --bg: #fafafa;
   --card: #fff;
   --maxw: 1000px;
@@ -18,7 +19,7 @@ html, body {
 
 /* ----------------- GLOBAL ----------------- */
 body {
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
   margin: 0;
   color: #222;
   background: var(--bg);
@@ -123,8 +124,8 @@ body {
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(30,30,30,0.05);
   text-align: center;
-  opacity: 0;             /* hidden initially for animation */
-  transform: translateY(20px); /* slide up on load */
+  opacity: 1;
+  transform: none;
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -135,7 +136,7 @@ body {
   object-fit: cover;
   object-position: center;
   margin-bottom: 1rem;
-  border: 3px solid black;
+  border: 3px solid var(--gold);
 }
 
 .advisor-card h3 {
@@ -226,9 +227,9 @@ body {
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(30,30,30,0.05);
   text-align: center;
-  transform: translateY(20px); /* initial Y offset */
-  opacity: 0;                 /* initial hidden */
-  filter: blur(4px);          /* initial blur */
+  transform: none;
+  opacity: 1;
+  filter: none;
   transition: transform 0.6s ease, opacity 0.6s ease, filter 0.6s ease;
 }
 
@@ -266,7 +267,7 @@ body {
   object-fit: cover;
   object-position: center;
   margin-bottom: 1rem;
-  border: 3px solid black;
+  border: 3px solid var(--gold);
 }
 
 .leadership-grid .leader-card:nth-child(4) img {
@@ -324,11 +325,11 @@ body {
 .sub-team-card {
   background: var(--card);
   padding: 1.5rem;
-  border-radius: 16px;
+  border-radius: 6px;
   box-shadow: 0 6px 20px rgba(30,30,30,0.05);
   text-align: center;
-  opacity: 0; /* hidden initially for animation */
-  transform: translateY(20px); /* start slightly below */
+  opacity: 1;
+  transform: none;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -346,7 +347,7 @@ body {
   object-fit: cover;
   object-position: center;
   margin-bottom: 1rem;
-  border: 3px solid black;
+  border: 3px solid var(--gold);
 }
 
 /* Sub-team name and role */
@@ -405,6 +406,11 @@ body {
   z-index: 0;
 }
 
+.about-hero::after {
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(80, 0, 0, 0.24) 0%, rgba(80, 0, 0, 0.12) 58%, rgba(20, 8, 5, 0.04) 100%);
+}
+
 .about-hero.visible .hero-bg {
   transform: scale(1);
 }
@@ -415,12 +421,14 @@ body {
 
 .about-hero .hero-content {
   position: relative;
-  max-width: 75vw;
-  z-index: 1;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 16px;
-  backdrop-filter: blur(4px);
+  max-width: 820px;
+  z-index: 2;
+  padding: 2rem 2.25rem;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.88);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  backdrop-filter: blur(2px);
   animation: fadeUp 1s ease-out;
 }
 
@@ -428,11 +436,16 @@ body {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   letter-spacing: 1px;
+  color: var(--accent);
+  text-shadow: none;
 }
 
 .about-hero p {
-  font-size: 1.2rem;
-  color: #f0f0f0;
+  font-size: 1.15rem;
+  max-width: 760px;
+  color: #302b27;
+  text-shadow: none;
+  line-height: 1.7;
 }
 
 @keyframes fadeUp {

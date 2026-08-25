@@ -10,9 +10,9 @@
   <link rel="icon" type="image/png" href="/assets/logo/Dig_Em_Emblem.png">
   <link rel="apple-touch-icon" href="/assets/logo/Dig_Em_Emblem.png">
   <link rel="shortcut icon" href="/assets/logo/Dig_Em_Emblem.png" type="image/png">
-  <link rel="stylesheet" href="/homestyle.css">
-  <link rel="stylesheet" href="/pages/sponsorpage/sponsorstyle.css">
-  <link rel="stylesheet" href="contactstyle.css">
+  <link rel="stylesheet" href="/homestyle.css?v=2">
+  <link rel="stylesheet" href="/pages/sponsorpage/sponsorstyle.css?v=2">
+  <link rel="stylesheet" href="/pages/contactpage/contactstyle.css?v=6">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="/pages/sponsorpage/sponsor.js" defer></script>
   <script src="/js/menu-toggle.js" defer></script>
@@ -66,16 +66,16 @@
           <a href="/"><img src="/assets/logo/Dig_Em_Logo.png" alt="Dig 'Em Aggies logo" /></a>
         </div>
 
-        <button class="menu-toggle" aria-label="Toggle navigation">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <div class="nav-links" aria-label="Main navigation">
+        <div class="nav-links" id="main-navigation" aria-label="Main navigation">
           <a href="/index.html">Home</a>
-          <a href="/sponsor">Sponsors</a>
-          <a href="/about">About</a>
+          <a href="/pages/sponsorpage/sponsorindex.html">Sponsors</a>
+          <a href="/pages/aboutpage/aboutindex.html">About</a>
         </div>
       </nav>
     </div>
@@ -85,7 +85,12 @@
   <main class="container">
     <section id="contact" class="contact-section">
       <div class="container">
-        <h1>Contact Us</h1>
+        <div class="contact-intro">
+          <p class="eyebrow">Let’s build something meaningful</p>
+          <h1>Start a<br><span class="nowrap">conversation.</span></h1>
+          <p>Whether you are interested in joining the team, supporting our build, or partnering with student engineers, we would love to hear from you.</p>
+          <a class="contact-email" href="mailto:digem.team@gmail.com">digem.team@gmail.com <span aria-hidden="true">→</span></a>
+        </div>
 
         <form id="sponsorForm" class="contact-form">
           <div class="form-group">
@@ -105,12 +110,12 @@
     
           <div class="form-group">
             <label for="message">Message / Inquiry</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us about your inquiry" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your inquiry, goals, or questions" required></textarea>
           </div>
     
           <button type="submit" class="btn-submit">Send Inquiry</button>
     
-          <p id="formMessage" class="form-message"></p>
+          <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -131,10 +136,10 @@
       <div class="footer-right">
         <h3>Follow Us</h3>
         <div class="social-links">
-          <a href="https://www.instagram.com/dig.em.aggies/" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/dig.em.aggies/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/company/tamu-dig-em-aggies/" target="_blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/tamu-dig-em-aggies/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
@@ -146,6 +151,5 @@
     </div>
   </footer>
 
-  <script src="contact.js"></script>
 </body>
 </html>

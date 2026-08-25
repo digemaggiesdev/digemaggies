@@ -65,16 +65,16 @@
           <a href="/"><img src="/assets/logo/Dig_Em_Logo.png" alt="Dig 'Em Aggies logo" /></a>
         </div>
 
-        <button class="menu-toggle" aria-label="Toggle navigation">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <div class="nav-links" aria-label="Main navigation">
+        <div class="nav-links" id="main-navigation" aria-label="Main navigation">
           <a href="/index.html">Home</a>
-          <a href="/sponsor">Sponsors</a>
-          <a href="/contact">Contact</a>
+          <a href="/pages/sponsorpage/sponsorindex.html">Sponsors</a>
+          <a href="/pages/contactpage/contactindex.html">Contact</a>
         </div>
       </nav>
     </div>
@@ -130,7 +130,7 @@
         <section class="faculty-advisor" id="faculty-advisor">
       <h2>Faculty Advisor</h2>
       <div class="advisor-card">
-        <img src="/assets/team/leadership/dr.jafari.png" alt="Faculty Advisor Photo">
+        <img src="/assets/team/leadership/dr.jafari.png" alt="Navid H. Jafari, faculty advisor" loading="lazy">
         <h3>Navid H. Jafari</h3>
         <p class="department">Department of Civil & Environmental Engineering </p>
         <p class="bio">
@@ -146,55 +146,55 @@
     
         <!-- Member 1 -->
         <div class="leader-card">
-          <img src="/assets/team/leadership/Jett_Davis.jpg" alt="Member 1 Photo">
+          <img src="/assets/team/leadership/Jett_Davis.jpg" alt="Jett Davis, Chief Executive Officer" loading="lazy">
           <h3>Jett Davis</h3>
           <p class="position">Chief Executive Officer</p>
           <p class="class-major">'27 MEEN</p>
-          <a href="https://www.linkedin.com/in/jett-davis-192604306/" target="_blank" class="linkedin-link">
+          <a href="https://www.linkedin.com/in/jett-davis-192604306/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
     
         <!-- Member 2 -->
         <div class="leader-card">
-          <img src="/assets/team/leadership/Jonathan_Harwood.jpg" alt="Member 2 Photo">
+          <img src="/assets/team/leadership/Jonathan_Harwood.jpg" alt="Jonathan Harwood, Chief Operations Officer" loading="lazy">
           <h3>Jonathan Harwood</h3>
           <p class="position">Chief Operations Officer</p>
           <p class="class-major">'28 MEEN</p>
-          <a href="https://www.linkedin.com/in/jonathan-harwood-tamu/" target="_blank" class="linkedin-link">
+          <a href="https://www.linkedin.com/in/jonathan-harwood-tamu/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
     
         <!-- Member 3 -->
         <div class="leader-card">
-          <img src="/assets/team/leadership/Will_Campbell.jpg" alt="Member 3 Photo">
+          <img src="/assets/team/leadership/Will_Campbell.jpg" alt="William Campbell, Chief Financial Officer" loading="lazy">
           <h3>William Campbell</h3>
           <p class="position">Chief Financial Officer</p>
           <p class="class-major">'27 CVEN</p>
-          <a href="https://www.linkedin.com/in/william-campbell-509357299/" target="_blank" class="linkedin-link">
+          <a href="https://www.linkedin.com/in/william-campbell-509357299/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
     
         <!-- Member 4 -->
         <div class="leader-card">
-          <img src="/assets/team/leadership/Collin_Sun.jpg" alt="Member 4 Photo">
+          <img src="/assets/team/leadership/Collin_Sun.jpg" alt="Collin Sun, Chief Technical Officer" loading="lazy">
           <h3>Collin Sun</h3>
           <p class="position">Chief Technical Officer</p>
           <p class="class-major">'28 MEEN</p>
-          <a href="https://www.linkedin.com/in/collin-sun-222197384/" target="_blank" class="linkedin-link">
+          <a href="https://www.linkedin.com/in/collin-sun-222197384/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
     
         <!-- Member 5 -->
         <div class="leader-card">
-          <img src="/assets/team/leadership/Diogo_photo.png" alt="Member 5 Photo">
+          <img src="/assets/team/leadership/Diogo_photo.png" alt="Diogo, Chief Underclassman Officer" loading="lazy">
           <h3>Diogo</h3>
           <p class="position">Chief Underclassman Officer</p>
           <p class="class-major">'29 ENGR</p>
-          <a href="" target="_blank" class="linkedin-link">
+          <a href="https://www.linkedin.com/in/diogo-bandeira-29993b385/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
@@ -244,7 +244,7 @@
         <div class="sub-team-card">
           <img src="/assets/team/groups/business.jpeg" alt="business">
           <h3>Business Team</h3>
-          <p>Develops control systems, data analysis, and automation software.</p>
+          <p>Builds sponsor relationships, manages outreach, and supports the team's operations.</p>
           <!--
           <a href="/pages/subteams/software.html" class="team-link">
             <i class="fas fa-users"></i> See Members
@@ -256,7 +256,7 @@
         <div class="sub-team-card">
           <img src="/assets/team/groups/hydraulics.jpeg" alt="hydraulics">
           <h3>Propulsion Team</h3>
-          <p>Handles communications, sponsorships, and community engagement.</p>
+          <p>Designs the hydraulic systems that drive and stabilize the machine underground.</p>
           <!--
           <a href="/pages/subteams/outreach.html" class="team-link">
             <i class="fas fa-users"></i> See Members
@@ -268,7 +268,7 @@
         <div class="sub-team-card">
           <img src="/assets/team/groups/Muck.jpeg" alt="Muck removal">
           <h3>Extraction Team</h3>
-          <p>Handles communications, sponsorships, and community engagement.</p>
+          <p>Manages excavated material and keeps the tunnel boring process moving efficiently.</p>
           <!--
           <a href="/pages/subteams/outreach.html" class="team-link">
             <i class="fas fa-users"></i> See Members
@@ -280,7 +280,7 @@
         <div class="sub-team-card">
           <img src="/assets/team/groups/Muck.jpeg" alt="Muck removal">
           <h3>Integration Team</h3>
-          <p>Handles communications, sponsorships, and community engagement.</p>
+          <p>Brings every subsystem together through testing, coordination, and field readiness.</p>
           <!--
           <a href="/pages/subteams/outreach.html" class="team-link">
             <i class="fas fa-users"></i> See Members
@@ -308,10 +308,10 @@
       <div class="footer-right">
         <h3>Follow Us</h3>
         <div class="social-links">
-          <a href="https://www.instagram.com/dig.em.aggies/" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/dig.em.aggies/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/company/tamu-dig-em-aggies/" target="_blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/tamu-dig-em-aggies/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
           </a>
         </div>

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
   <script src="/pages/sponsorpage/sponsor.js" defer></script>
+  <script src="/js/menu-toggle.js" defer></script>
   <script src="/home.js" defer></script>
   <script src="/transition.js" defer></script>
   <script type="application/ld+json">
@@ -61,7 +62,7 @@
           <a href="/"><img src="/assets/logo/Dig_Em_Logo.png" alt="Dig 'Em Aggies logo" /></a>
         </div>
 
-        <button class="menu-toggle" aria-label="Toggle navigation">
+        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
             <span></span>
             <span></span>
             <span></span>
@@ -69,10 +70,10 @@
 
 
 
-        <div class="nav-links" aria-label="Main navigation">
+        <div class="nav-links" id="main-navigation" aria-label="Main navigation">
           <a href="/index.html">Home</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
+          <a href="/pages/aboutpage/aboutindex.html">About</a>
+          <a href="/pages/contactpage/contactindex.html">Contact</a>
         </div>
       </nav>
     </div>
@@ -82,6 +83,12 @@
       <main>
   
         <section class="funding-hero">
+          <div class="funding-copy">
+            <p class="eyebrow">Support the next generation of builders</p>
+            <h1>Help us take innovation underground.</h1>
+            <p>Every sponsorship helps students design, build, and test a tunnel boring machine for the Not-a-Boring Competition.</p>
+            <a class="btn sponsor-hero-cta" href="#contact">Become a sponsor <span aria-hidden="true">→</span></a>
+          </div>
           <div class="funding-goal">
             <div class="chart-container">
               <div class="chart-wrapper">
@@ -105,26 +112,26 @@
           <h2>Gold Sponsors ($1000+)</h2>
           <div class="tier-bar"></div>
           <ul class="tier-benefits">
-            <li>Silver benefits</li>
+            <li>All Maroon benefits</li>
            <li>Team shirt and hardhat</li>
            <li>Company meet and greet at team meeting</li>
            <li>Large company logo on TBM</li>
           </ul>
           <div class="sponsor-logos">
-            <a href="https://engineering.tamu.edu/civil/index.html" target="_blank" class="sponsor-logo" title="CVEN_DEPT">
-              <img src="/assets/sponsorship_images/CVEN_DEPT.png" alt="CVEN_DEPT">
+              <a href="https://engineering.tamu.edu/civil/index.html" target="_blank" rel="noopener noreferrer" class="sponsor-logo" title="Texas A&M Civil and Environmental Engineering">
+              <img src="/assets/sponsorship_images/CVEN_DEPT.png" alt="Texas A&M Civil and Environmental Engineering">
             </a>
   
-            <a href="https://www.onshape.com/en/" target="_blank" class="sponsor-logo" title="onshape">
-             <img src="/assets/sponsorship_images/onshape.png" alt="onshape">
+            <a href="https://www.onshape.com/en/" target="_blank" rel="noopener noreferrer" class="sponsor-logo" title="Onshape">
+             <img src="/assets/sponsorship_images/onshape.png" alt="Onshape">
             </a>
   
-            <a href="https://spinkssolutions.com/" target="_blank" class="sponsor-logo" title="spinks_solution_llc">
-             <img src="/assets/sponsorship_images/spinks_solution_llc.png" alt="spinks_solution_llc">
+            <a href="https://spinkssolutions.com/" target="_blank" rel="noopener noreferrer" class="sponsor-logo" title="Spinks Solutions">
+             <img src="/assets/sponsorship_images/spinks_solution_llc.png" alt="Spinks Solutions">
             </a>
   
-            <a href="https://www.zachryconstructioncorp.com/" target="_blank" class="sponsor-logo" title="zachary_coorporation">
-              <img src="/assets/sponsorship_images/zachary_coorporation.jpg" alt="zachary_coorporation">
+            <a href="https://www.zachryconstructioncorp.com/" target="_blank" rel="noopener noreferrer" class="sponsor-logo" title="Zachry Construction Corporation">
+              <img src="/assets/sponsorship_images/zachary_coorporation.jpg" alt="Zachry Construction Corporation">
             </a>
           </div>
         </section>
@@ -134,19 +141,19 @@
          <div class="tier-bar"></div>
 
          <ul class="tier-benefits">
-           <li>Maroon benefits</li>
+           <li>All Maroon benefits</li>
            <li>Sponsored Instagram post</li>
            <li>Sponsored LinkedIn post</li>
            <li>Medium company logo on TBM</li>
          </ul>
           <div class="sponsor-logos">
-            <a href="https://garverusa.com/" target="_blank" class="sponsor-logo" title="Company 2">
+            <a href="https://garverusa.com/" target="_blank" rel="noopener noreferrer" class="sponsor-logo" title="Garver">
               <img src="/assets/sponsorship_images/garver.png" alt="Garver">
            </a>
-           <a href="https://www.dovetailwealth.com/" target="_blank" class="sponsor-logo" title="Company 2">
+           <a href="https://www.dovetailwealth.com/" target="_blank" rel="noopener noreferrer" class="sponsor-logo" title="Dovetail">
               <img src="/assets/sponsorship_images/Dovetail.jpg" alt="Dovetail">
            </a>
-           <a href="https://master-builders-solutions.com/en-us/" target="_blank" class="sponsor-logo" title="Company 2">
+           <a href="https://master-builders-solutions.com/en-us/" target="_blank" rel="noopener noreferrer" class="sponsor-logo" title="Master Builders Solutions">
               <img src="/assets/sponsorship_images/masterbuilders.png" alt="Masterbuilders">
            </a>
           </div>
@@ -164,8 +171,8 @@
       <li>Dig day invitation</li>
     </ul>
     <div class="sponsor-logos">
-      <a href="" target="_blank" class="sponsor-logo" title="Company 3">
-        <img src="/assets/sponsorship_images/Metzler_Family.png" alt="Met family">
+      <a href="#contact" class="sponsor-logo" title="Metzler Family">
+        <img src="/assets/sponsorship_images/Metzler_Family.png" alt="Metzler Family">
       </a>
     </div>
   </section>
@@ -198,7 +205,7 @@
   
         <button type="submit" class="btn-submit">Send Inquiry</button>
   
-        <p id="formMessage" class="form-message"></p>
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
@@ -221,10 +228,10 @@
       <div class="footer-right">
         <h3>Follow Us</h3>
         <div class="social-links">
-          <a href="https://www.instagram.com/dig.em.aggies/" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/dig.em.aggies/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/company/tamu-dig-em-aggies/" target="_blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/tamu-dig-em-aggies/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
@@ -236,6 +243,5 @@
     </div>
   </footer>
 
-  <script src="/home.js"></script>
 </body>
 </html>

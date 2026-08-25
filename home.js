@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== HERO PARTICLES + PARALLAX =====
   const canvas = document.getElementById('heroParticles');
-  if (canvas) {
+  if (canvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const ctx = canvas.getContext('2d');
     let particlesArray = [];
     let scrollOffset = 0;
