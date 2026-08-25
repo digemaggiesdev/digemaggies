@@ -489,6 +489,19 @@ body {
   z-index: 0;
 }
 
+.leader-card img,
+.sub-team-card img,
+.advisor-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
 .about-hero::after {
   z-index: 1;
   background: linear-gradient(90deg, rgba(80, 0, 0, 0.24) 0%, rgba(80, 0, 0, 0.12) 58%, rgba(20, 8, 5, 0.04) 100%);
@@ -788,6 +801,25 @@ body {
     padding: 1rem;
   }
 
+  .leader-card img,
+  .sub-team-card img,
+  .advisor-card img {
+    width: 100%;
+    max-width: 100%;
+    height: clamp(180px, 45vw, 260px);
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .leader-card img {
+    border-radius: 8px;
+  }
+
+  .sub-team-card img {
+    height: clamp(200px, 48vw, 260px);
+  }
+
   .advisor-card {
     grid-template-columns: 1fr;
   }
@@ -795,7 +827,7 @@ body {
   .advisor-card img {
     grid-row: auto;
     width: 100%;
-    height: 210px;
+    height: clamp(220px, 55vw, 320px);
   }
 
   .about-hero {
