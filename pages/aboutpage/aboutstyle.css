@@ -480,7 +480,7 @@ body {
   left: 0;   
   width: 100%;
   height: 100%;
-  background-image: url("/assets/team/tour.JPG");
+  background-image: url("../../assets/team/tour.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -500,6 +500,35 @@ body {
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
+}
+
+.leader-card img {
+  object-position: center top;
+}
+
+@media (max-width: 600px) {
+  .leader-card img,
+  .sub-team-card img,
+  .advisor-card img {
+    width: 100%;
+    max-width: 100%;
+    height: 240px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 16%;
+  }
+
+  .leader-card img {
+    border-radius: 8px;
+    height: 260px;
+    object-position: center 14%;
+  }
+
+  .advisor-card img {
+    height: 220px;
+    aspect-ratio: 3 / 2;
+    object-position: center 12%;
+  }
 }
 
 .about-hero::after {
@@ -806,18 +835,22 @@ body {
   .advisor-card img {
     width: 100%;
     max-width: 100%;
-    height: clamp(180px, 45vw, 260px);
+    height: auto;
+    aspect-ratio: 5 / 4;
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
     display: block;
   }
 
   .leader-card img {
     border-radius: 8px;
+    height: 260px;
+    aspect-ratio: 3 / 4;
+    object-position: center 16%;
   }
 
   .sub-team-card img {
-    height: clamp(200px, 48vw, 260px);
+    aspect-ratio: 5 / 4;
   }
 
   .advisor-card {
@@ -827,7 +860,9 @@ body {
   .advisor-card img {
     grid-row: auto;
     width: 100%;
-    height: clamp(220px, 55vw, 320px);
+    height: 240px;
+    aspect-ratio: 3 / 2;
+    object-position: center 12%;
   }
 
   .about-hero {
