@@ -1412,6 +1412,142 @@ footer a:hover {
   }
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .brand img {
+    height: 38px;
+  }
+
+  .nav-links a {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    min-height: 76svh;
+    height: auto;
+    width: 100%;
+    padding: 1rem 0 2rem;
+  }
+
+  .hero-bg {
+    width: 100%;
+  }
+
+  .hero-left {
+    padding: 1rem 0 0.5rem;
+  }
+
+  .eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 11vw, 2.7rem);
+    line-height: 1.1;
+    max-width: 100%;
+  }
+
+  .hero .lead {
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
+  .hero-meta {
+    gap: 0.5rem 0.7rem;
+    font-size: 0.58rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .cta .btn,
+  .recruitment-section .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-scroll-cue {
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+  }
+
+  .card,
+  .build-process,
+  .recruitment-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .mission-container,
+  .competition-container,
+  .sponsor-intro {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .mission-image,
+  .competition-image {
+    width: 100%;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .stat {
+    border-right: none;
+    border-bottom: 1px solid #eadfd3;
+    padding: 0.75rem 0;
+  }
+
+  .stat:last-child {
+    border-bottom: none;
+  }
+
+  .recruitment-section {
+    align-items: stretch;
+  }
+
+  .process-grid,
+  .faq-list,
+  .sponsor-logo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-track img {
+    width: 120px;
+    height: 56px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}
+
 /* Scroll animation */
 .competition-text.visible,
 .competition-image.visible {

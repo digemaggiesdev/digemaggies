@@ -844,6 +844,72 @@ footer a:hover {
   }
 }
 
+@media (max-width: 480px) {
+  .sponsor-page-header {
+    margin: 1.5rem 1rem;
+  }
+
+  .sponsor-page-header h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .sponsor-page-header p {
+    font-size: 0.95rem;
+  }
+
+  .sponsor-tiers {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .sponsor-tier-card {
+    padding: 1rem;
+  }
+
+  .tier-benefits li {
+    padding: 0.75rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .funding-hero {
+    min-height: 760px;
+    padding: 4.5rem 1rem 2rem;
+  }
+
+  .funding-copy {
+    width: 100%;
+  }
+
+  .funding-copy h1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .funding-copy > p:not(.eyebrow) {
+    font-size: 0.96rem;
+  }
+
+  .sponsor-hero-cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .funding-goal {
+    width: min(320px, 82vw);
+    height: min(320px, 82vw);
+  }
+
+  .chart-center p {
+    font-size: 0.85rem;
+  }
+
+  .chart-center strong {
+    font-size: 1.3rem;
+  }
+}
+
 
 /* ===========================
    FUNDING HERO BACKGROUND

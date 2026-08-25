@@ -138,6 +138,50 @@
   }
 }
 
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 1.5rem 1rem;
+    margin: 1.25rem auto;
+  }
+
+  .contact-intro .eyebrow {
+    font-size: 0.68rem;
+  }
+
+  .contact-intro h1 {
+    font-size: 1.8rem;
+    line-height: 1.15;
+    max-width: 100%;
+  }
+
+  .contact-intro > p:not(.eyebrow) {
+    font-size: 0.96rem;
+  }
+
+  .contact-email {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
 /* ----------------- TOAST NOTIFICATION ----------------- */
 .toast {
   position: fixed;
