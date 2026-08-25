@@ -10,8 +10,8 @@
   <link rel="icon" type="image/png" href="/assets/logo/Dig_Em_Emblem.png">
   <link rel="apple-touch-icon" href="/assets/logo/Dig_Em_Emblem.png">
   <link rel="shortcut icon" href="/assets/logo/Dig_Em_Emblem.png" type="image/png">
-  <link rel="stylesheet" href="/homestyle.css">
-  <link rel="stylesheet" href="/pages/sponsorpage/sponsorstyle.css">
+  <link rel="stylesheet" href="/homestyle.css?v=3">
+  <link rel="stylesheet" href="/pages/sponsorpage/sponsorstyle.css?v=4">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
   <script src="/pages/sponsorpage/sponsor.js" defer></script>
@@ -108,6 +108,7 @@
               <p>We are grateful for the generous support of our sponsors who help us innovate and grow.</p>
             </div>
           
+          <div class="sponsor-tiers">
           <section class="sponsor-tier-card gold">
           <h2>Gold Sponsors ($1000+)</h2>
           <div class="tier-bar"></div>
@@ -176,11 +177,15 @@
       </a>
     </div>
   </section>
+  </div>
   
   <section id="contact" class="contact-section">
     <div class="container">
-      <h2>Contact Us</h2>
-      <p>If you are interested in sponsoring Dig'em Aggies or learning more, fill out the form below and we'll get back to you!</p>
+      <div class="sponsor-contact-heading">
+        <p class="eyebrow">Let’s build the future underground</p>
+        <h2>Start a sponsorship conversation.</h2>
+        <p>Tell us what you have in mind. We’ll follow up with sponsorship details, partnership opportunities, and ways your organization can support the build.</p>
+      </div>
   
       <form id="sponsorForm" class="contact-form">
         <div class="form-group">
@@ -203,7 +208,7 @@
           <textarea id="message" name="message" rows="5" placeholder="Tell us about your inquiry" required></textarea>
         </div>
   
-        <button type="submit" class="btn-submit">Send Inquiry</button>
+        <button type="submit" class="btn-submit">Send sponsorship inquiry <span aria-hidden="true">→</span></button>
   
         <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
       </form>

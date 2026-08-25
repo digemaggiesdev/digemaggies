@@ -106,7 +106,7 @@
       ]
     }
     </script>
-  <link rel="stylesheet" href="/homestyle.css">
+  <link rel="stylesheet" href="/homestyle.css?v=3">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <script src="/home.js" defer></script>
   <script src="/js/menu-toggle.js" defer></script>
@@ -151,6 +151,11 @@
       <p class="lead">
         We are Dig ‘Em Aggies, a student-led engineering team dedicated to advancing tunneling technology through innovation, teamwork, and real-world design challenges.
       </p>
+      <div class="hero-meta" aria-label="Team details">
+        <span>Student-led</span>
+        <span>Texas A&amp;M University</span>
+        <span>College Station, Texas</span>
+      </div>
       <div class="cta">
         <a class="btn btn-small" href="/pages/aboutpage/aboutindex.html">
           Meet the Team <span aria-hidden="true">→</span>
@@ -159,6 +164,7 @@
           Sponsor the Build <span aria-hidden="true">→</span>
         </a>
       </div>
+      <a class="hero-scroll-cue" href="#about">Explore the build <span aria-hidden="true">↓</span></a>
     </div>
   </section>
 
@@ -166,24 +172,26 @@
   <section id="about" class="card mission-section">
     <div class="mission-container">
       <div class="mission-text">
+        <p class="section-kicker">Purpose / Direction</p>
         <h2>Our Mission</h2>
         <p>
           Drawing on the diverse talents of students across the Texas A&amp;M Engineering Colleges, we aim to contribute innovative ideas to the future of tunneling infrastructure, while representing the Aggie spirit of leadership, integrity, and excellence.
         </p>
-        <hr style="border:none;border-top:1px dashed #eee;margin:16px 0" />
+        <hr class="section-rule" />
         <h2>The Vision</h2>
         <p>
           We seek to design and manufacture a horizontal boring machine, capable of boring and reinforcing a thirty meter tunnel. This will be much more complex, and we hope that our experience this year will ready us.
         </p>
       </div>
-      <div class="mission-image">
-        <img src="/assets/team/presentationPhoto.JPG" alt="Dig 'Em Aggies students presenting their tunnel boring machine" loading="lazy">
-      </div>
+      <figure class="mission-image">
+        <img src="/assets/team/homepage.jpg" alt="Dig 'Em Aggies students presenting their tunnel boring machine" loading="lazy">
+      </figure>
     </div>
   </section>
 
 
-  <section class="card">
+  <section class="card team-section">
+    <p class="section-kicker">The people behind the machine</p>
     <h2>Our Team</h2>
     <div class="stats" aria-hidden="false">
       <div class="stat">
@@ -213,18 +221,44 @@
   <section class="card competition-section">
     <div class="competition-container">
       <div class="competition-text">
+        <p class="section-kicker">The challenge</p>
         <h2>What is the Not-a-Boring Competition?</h2>
         <p>
           The Not-a-Boring Competition is an international engineering design competition with the goal of bringing innovation to the Tunnel Boring Industry. This competition consists of multiple design phases that conclude in a week-long dig, where teams from across the world come to Bastrop, Texas to showcase their innovations in tunnel boring machine technology.
         </p>
       </div>
-      <div class="competition-image">
-        <img src="/assets/team/tour.JPG" alt="Dig 'Em Aggies team members touring the competition site" loading="lazy">
-      </div>
+      <figure class="competition-image">
+        <img src="/assets/team/home2.jpg" alt="Dig 'Em Aggies team members touring the competition site" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="build-process" aria-labelledby="build-process-title">
+    <div class="process-heading">
+      <p class="section-kicker">From idea to excavation</p>
+      <h2 id="build-process-title">How we build.</h2>
+    </div>
+    <div class="process-grid">
+      <article class="process-step">
+        <span>01</span>
+        <h3>Design</h3>
+        <p>Turn research and ambitious ideas into a machine that can work underground.</p>
+      </article>
+      <article class="process-step">
+        <span>02</span>
+        <h3>Build</h3>
+        <p>Prototype, fabricate, and integrate systems across a multidisciplinary team.</p>
+      </article>
+      <article class="process-step">
+        <span>03</span>
+        <h3>Dig</h3>
+        <p>Put the design to the test and represent Texas A&amp;M at the competition.</p>
+      </article>
     </div>
   </section>
 
   <section class="card faq-section" id="faq">
+    <p class="section-kicker">Common questions</p>
     <div class="faq-container">
       <h2>Dig 'Em Aggies FAQ</h2>
       <div class="faq-list">
@@ -244,33 +278,25 @@
     </div>
   </section>
 
-    <section id="sponsor" class="card">
-      <h2>Sponsors</h2>
-      <p>We’re grateful for our amazing sponsors who support innovation and student engineering at Texas A&M.</p>
-      <div class="sponsor-gallery">
-        <div class="sponsor-track">
-          <img src="/assets/sponsorship_images/CVEN_DEPT.png" alt="Texas A&M Civil and Environmental Engineering sponsor logo" loading="lazy">
-          <img src="/assets/sponsorship_images/Dovetail.jpg" alt="Dovetail sponsor logo" loading="lazy">
-          <img src="/assets/sponsorship_images/garver.png" alt="Garver sponsor logo" loading="lazy">
-          <img src="/assets/sponsorship_images/masterbuilders.png" alt="Master Builders sponsor logo" loading="lazy">
-          <img src="/assets/sponsorship_images/onshape.png" alt="Onshape sponsor logo" loading="lazy">
-          <img src="/assets/sponsorship_images/spinks_solution_llc.png" alt="Spinks Solutions sponsor logo" loading="lazy">
-          <img src="/assets/sponsorship_images/zachary_coorporation.jpg" alt="Zachry Corporation sponsor logo" loading="lazy">
-          <img src="/assets/sponsorship_images/Metzler_Family.png" alt="Metzler Family sponsor logo" loading="lazy">
-          <!-- duplicate logos for infinite scroll effect -->
-          <img src="/assets/sponsorship_images/CVEN_DEPT.png" alt="" aria-hidden="true">
-          <img src="/assets/sponsorship_images/Dovetail.jpg" alt="" aria-hidden="true">
-          <img src="/assets/sponsorship_images/garver.png" alt="" aria-hidden="true">
-          <img src="/assets/sponsorship_images/masterbuilders.png" alt="" aria-hidden="true">
-          <img src="/assets/sponsorship_images/onshape.png" alt="" aria-hidden="true">
-          <img src="/assets/sponsorship_images/spinks_solution_llc.png" alt="" aria-hidden="true">
-          <img src="/assets/sponsorship_images/zachary_coorporation.jpg" alt="" aria-hidden="true">
-          <img src="/assets/sponsorship_images/Metzler_Family.png" alt="" aria-hidden="true">
+    <section id="sponsor" class="card sponsors-section">
+      <div class="sponsor-intro">
+        <div>
+          <p class="section-kicker">Back the build</p>
+          <h2>Partners in progress.</h2>
+          <p>Our sponsors make it possible for students to turn ambitious engineering into a machine built for the real world.</p>
         </div>
+        <a class="sponsor-cta" href="/pages/sponsorpage/sponsorindex.html">View sponsorship options <span aria-hidden="true">→</span></a>
       </div>
-      <p style="font-size:0.95rem;color:var(--muted);margin-top:1rem;">
-        Interested in sponsoring us? Email <a href="mailto:digem.team@gmail.com">Digem.team@gmail.com</a>
-      </p>
+      <div class="sponsor-logo-grid" aria-label="Our sponsors">
+        <div class="sponsor-tile"><img src="/assets/sponsorship_images/CVEN_DEPT.png" alt="Texas A&M Civil and Environmental Engineering" loading="lazy"></div>
+        <div class="sponsor-tile"><img src="/assets/sponsorship_images/Dovetail.jpg" alt="Dovetail" loading="lazy"></div>
+        <div class="sponsor-tile"><img src="/assets/sponsorship_images/garver.png" alt="Garver" loading="lazy"></div>
+        <div class="sponsor-tile"><img src="/assets/sponsorship_images/masterbuilders.png" alt="Master Builders" loading="lazy"></div>
+        <div class="sponsor-tile"><img src="/assets/sponsorship_images/onshape.png" alt="Onshape" loading="lazy"></div>
+        <div class="sponsor-tile"><img src="/assets/sponsorship_images/spinks_solution_llc.png" alt="Spinks Solutions" loading="lazy"></div>
+        <div class="sponsor-tile"><img src="/assets/sponsorship_images/zachary_coorporation.jpg" alt="Zachry Corporation" loading="lazy"></div>
+        <div class="sponsor-tile"><img src="/assets/sponsorship_images/Metzler_Family.png" alt="Metzler Family" loading="lazy"></div>
+      </div>
     </section>
 
   </main>
