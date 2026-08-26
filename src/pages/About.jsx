@@ -183,7 +183,7 @@ const About = () => {
                   </div>
                   <div>
                     <span>Motto</span>
-                    <strong>Gig 'Em Aggies</strong>
+                    <strong>Dig 'Em Aggies</strong>
                   </div>
                 </div>
               </div>

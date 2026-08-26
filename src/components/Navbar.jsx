@@ -98,7 +98,6 @@ const Navbar = () => {
                   <i className="fab fa-linkedin"></i>
                 </a>
               </div>
-              <p>Gig 'Em Aggies 👍</p>
             </div>
           </div>
         </nav>
