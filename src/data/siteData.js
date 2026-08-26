@@ -75,21 +75,21 @@ export const engineeringMilestones = [
   {
     phase: '01',
     title: 'CAD & Soil Mechanics Modeling',
-    status: 'Completed',
+    status: 'In Progress',
     date: 'Fall 2024',
     description: 'FEA structural simulation of the cutterhead wheel and 3D modeling of soil displacement under Bastrop clay conditions.'
   },
   {
     phase: '02',
     title: 'Gearbox & Propulsion Fabrication',
-    status: 'Completed',
+    status: 'Upcoming',
     date: 'Early Spring 2025',
     description: 'Precision CNC machining of disc cutter teeth, hydraulic manifold assembly, and axial jacking frame welding.'
   },
   {
     phase: '03',
     title: 'Telemetry & Surface Control Deck',
-    status: 'In Progress',
+    status: 'Upcoming',
     date: 'Mid Spring 2025',
     description: 'Integrating 32 live diagnostic nodes, CAN bus telemetry, laser target guidance, and operator React dashboards.'
   },
