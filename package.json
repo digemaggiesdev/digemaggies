@@ -2,8 +2,11 @@
   "name": "digem-aggies",
   "version": "1.0.0",
   "description": "Repository for the official website of **Dig’em Aggies**, a student organization at **Texas A&M University** dedicated to design, development, and outreach in tunnel boring technology.",
-  "main": ".tmpdiag.js",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,12 +16,21 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/digemaggiesdev/digemaggies/issues"
   },
   "homepage": "https://github.com/digemaggiesdev/digemaggies#readme",
   "dependencies": {
-    "playwright": "^1.62.1"
+    "chart.js": "^4.5.1",
+    "lucide-react": "^1.34.0",
+    "playwright": "^1.62.1",
+    "react": "^19.2.8",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.0",
+    "vite": "^8.2.2"
   }
 }
