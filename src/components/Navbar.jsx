@@ -35,42 +35,71 @@ const Navbar = () => {
           </button>
 
           <div className={`nav-links ${isOpen ? 'open' : ''}`} id="main-navigation">
+            <div className="mobile-nav-header">
+              <span className="mobile-nav-title">Texas A&amp;M Tunneling</span>
+              <p className="mobile-nav-subtitle">Dig 'Em Aggies NABC Team</p>
+            </div>
             <Link
               to="/"
               className={location.pathname === '/' ? 'active' : ''}
               onClick={closeMenu}
             >
-              Home
+              <i className="fas fa-home mobile-nav-icon"></i>
+              <span>Home</span>
             </Link>
             <Link
               to="/about"
               className={location.pathname === '/about' ? 'active' : ''}
               onClick={closeMenu}
             >
-              About
+              <i className="fas fa-users mobile-nav-icon"></i>
+              <span>About</span>
             </Link>
             <Link
               to="/sponsor"
               className={location.pathname === '/sponsor' ? 'active' : ''}
               onClick={closeMenu}
             >
-              Sponsor
+              <i className="fas fa-handshake mobile-nav-icon"></i>
+              <span>Sponsor</span>
             </Link>
             <Link
               to="/contact"
               className={location.pathname === '/contact' ? 'active' : ''}
               onClick={closeMenu}
             >
-              Contact
+              <i className="fas fa-envelope mobile-nav-icon"></i>
+              <span>Contact</span>
             </Link>
             <Link
               to="/sponsor"
-              className="nav-cta"
+              className="nav-cta mobile-nav-cta"
               onClick={closeMenu}
             >
               <span>Sponsor Us</span>
               <span className="nav-cta-arrow" aria-hidden="true">→</span>
             </Link>
+            <div className="mobile-nav-footer">
+              <div className="mobile-social-links">
+                <a
+                  href="https://www.instagram.com/dig.em.aggies/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/tamu-dig-em-aggies/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <i className="fab fa-linkedin"></i>
+                </a>
+              </div>
+              <p>Gig 'Em Aggies 👍</p>
+            </div>
           </div>
         </nav>
       </div>
