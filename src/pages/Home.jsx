@@ -202,25 +202,26 @@ const Home = () => {
         <div className="hero-bg" style={{ backgroundImage: "url('/assets/renders/Render1.png')" }}></div>
         <div className="hero-overlay"></div>
         <canvas ref={canvasRef} id="heroParticles" className="hero-canvas"></canvas>
-        
+
         <div className="container hero-grid-container">
           <div className="hero-left">
             <div className="hero-status-pill">
               <span className="pulse-dot"></span>
-              <span>TEXAS A&amp;M UNIVERSITY • NOT-A-BORING COMPETITION 2026</span>
+              <span>DIG 'EM AGGIES • CURVED MICROTUNNELING DESIGN</span>
             </div>
             
-            <div className="eyebrow">Aggie Engineering Innovation</div>
+            <div className="eyebrow">Student Engineering Innovation</div>
             <h1 className="hero-title">
-              Pioneering <span className="highlight-gold">Autonomous</span> Tunnel Boring Systems
+              <span className="hero-title-brand">Dig 'Em <span className="highlight-gold">Aggies</span></span>
+              <span className="hero-title-tagline">Pioneering Autonomous Tunnel Boring Systems</span>
             </h1>
             <p className="lead">
-              Dig ‘Em Aggies is Texas A&amp;M’s student engineering team designing, fabricating, and operating horizontal tunnel boring machines to revolutionize underground transit.
+              Dig ‘Em Aggies is a student-run engineering team designing, fabricating, and operating horizontal tunnel boring machines to revolutionize underground transit.
             </p>
             
             <div className="hero-highlights">
               <div className="highlight-badge">
-                <i className="fas fa-bolt"></i> 100% Electric
+                <i className="fas fa-bolt"></i> 7.5 hp Electric HPU
               </div>
               <div className="highlight-badge">
                 <i className="fas fa-bullseye"></i> 30m Bastrop Track
@@ -248,17 +249,17 @@ const Home = () => {
               <div className="showcase-render-wrapper">
                 <img
                   src="/assets/renders/Render1.png"
-                  alt="Aggie Boring Machine Mk-II CAD Render"
+                  alt="Boring Machine Mk-I CAD Render"
                   className="showcase-render"
                 />
               </div>
               <div className="showcase-info">
-                <h3>Aggie Boring Machine Mk-II</h3>
+                <h3>Boring Machine Mk-I</h3>
                 <p className="showcase-tagline">Earth Pressure Balance Horizontal TBM</p>
                 <div className="showcase-mini-specs">
                   <div>
                     <span>Diameter</span>
-                    <strong>0.5 Meters</strong>
+                    <strong>24 Inches</strong>
                   </div>
                   <div>
                     <span>Drive</span>
@@ -298,12 +299,12 @@ const Home = () => {
               <p className="section-kicker">Purpose &amp; Direction</p>
               <h2>Our Mission</h2>
               <p>
-                Drawing on the diverse engineering talents across Texas A&amp;M University, we pioneer high-torque cutting mechanisms, automated liner installation, and precision telemetry systems. We embody the Aggie spirit of leadership, integrity, and technical excellence.
+                Dig 'Em Aggies brings together diverse engineering talent to pioneer high-torque cutting mechanisms, automated liner installation, and precision telemetry systems. We embody the Aggie spirit of leadership, integrity, and technical excellence.
               </p>
               <hr className="section-rule" />
-              <h2>The 2025 Vision</h2>
+              <h2>Our Design Direction</h2>
               <p>
-                Our flagship machine, the Aggie Boring Machine Mk-II, is engineered to bore and reinforce a 30-meter underground tunnel with directional laser guidance and zero additive residue.
+                Our flagship machine, the Boring Machine Mk-I, is engineered to bore and reinforce a 30-meter underground tunnel with directional laser guidance and zero additive residue.
               </p>
             </div>
             <figure className="mission-image">
@@ -318,32 +319,15 @@ const Home = () => {
         {/* Team Section */}
         <section className="card team-section">
           <p className="section-kicker">Multi-Disciplinary Excellence</p>
-          <h2 style={{ fontSize: '2.2rem', fontWeight: 800 }}>Engineered by Aggies</h2>
+          <h2 style={{ fontSize: '2.2rem', fontWeight: 800 }}>Machine Profile</h2>
           <div className="stats">
             {teamStats.map((stat, index) => (
               <div key={index} className="stat">
-                <h3><AnimatedCounter target={stat.target} />+</h3>
+                <h3><AnimatedCounter target={stat.target} />{stat.suffix}</h3>
                 <div>{stat.label}</div>
               </div>
             ))}
           </div>
-        </section>
-
-        {/* Recruitment / Get Involved */}
-        <section className="card recruitment-section" id="join">
-          <div>
-            <p className="eyebrow">Build What Comes Next</p>
-            <h2>Bring Your Major Underground</h2>
-            <p>From mechanical design to firmware, civil structures, and business operations, there is a place for ambitious Aggies ready to solve real engineering challenges.</p>
-          </div>
-          <a
-            className="btn"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfNeXj2ak7DiV2z1p9yebl-AG6lfPLEmqDUrjRVBVyt0r4-bA/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Apply to Join Team <span aria-hidden="true">→</span>
-          </a>
         </section>
 
         {/* Competition Section */}
@@ -405,7 +389,7 @@ const Home = () => {
             <article className="process-step">
               <span>04</span>
               <h3>Live Dig</h3>
-              <p>Deploying the machine underground in Bastrop, TX for real-world 30m boring.</p>
+              <p>Deploying the machine underground in Bastrop, TX for a real-world 30-meter bore.</p>
             </article>
           </div>
         </section>
@@ -478,7 +462,7 @@ const Home = () => {
                     name="name"
                     value={faqFormData.name}
                     onChange={handleFaqFormChange}
-                    placeholder="E.g. Rev Reveille"
+                    placeholder="E.x. John Doe"
                     required
                   />
                 </div>
@@ -490,7 +474,7 @@ const Home = () => {
                     name="email"
                     value={faqFormData.email}
                     onChange={handleFaqFormChange}
-                    placeholder="name@tamu.edu"
+                    placeholder="name@gmail.com"
                     required
                   />
                 </div>
@@ -559,14 +543,6 @@ const Home = () => {
           <h2>WANT MORE INFORMATION?</h2>
           <p>Connect with Dig 'Em Aggies for recruitment, sponsorships, or general inquiries.</p>
           <div className="sae-info-buttons">
-            <a
-              className="btn"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfNeXj2ak7DiV2z1p9yebl-AG6lfPLEmqDUrjRVBVyt0r4-bA/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Recruitment
-            </a>
             <Link className="btn btn-secondary" to="/contact">
               Contact Us
             </Link>

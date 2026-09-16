@@ -11,7 +11,7 @@ const Footer = () => {
               <img src="/assets/logo/Dig_Em_Logo.png" alt="Dig 'Em Aggies logo" />
             </Link>
             <p>
-              Texas A&M NABC Team<br />
+              Dig 'Em Aggies NABC Team<br />
               College Station, TX<br />
               <a href="mailto:digem.team@gmail.com">digem.team@gmail.com</a>
             </p>
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Texas A&M NABC. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Dig 'Em Aggies. All rights reserved. Developed by Jbbennett.</p>
         </div>
       </div>
     </footer>

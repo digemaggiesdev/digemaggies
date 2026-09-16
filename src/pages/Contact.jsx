@@ -119,7 +119,7 @@ const Contact = () => {
           <div className="hero-left">
             <div className="hero-status-pill">
               <span className="pulse-dot"></span>
-              <span>TEXAS A&amp;M UNIVERSITY • GET IN TOUCH</span>
+              <span>DIG 'EM AGGIES • GET IN TOUCH</span>
             </div>
             <div className="eyebrow">Connect With Dig 'Em Aggies</div>
             <h1 className="hero-title">
@@ -171,7 +171,7 @@ const Contact = () => {
           <div className="contact-intro">
             <p className="eyebrow">Direct Inquiry</p>
             <h1 style={{ fontSize: '2.5rem' }}>Send Us A Direct Inquiry</h1>
-            <p>Fill out the form below and an executive officer will follow up with you within 24–48 hours.</p>
+            <p>Fill out the form below and an executive officer will follow up with you.</p>
             <a className="contact-email" href="mailto:digem.team@gmail.com">
               digem.team@gmail.com <span aria-hidden="true">→</span>
             </a>

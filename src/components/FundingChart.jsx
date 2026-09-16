@@ -4,12 +4,12 @@ import { Doughnut } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const FundingChart = ({ raised = 1000, goal = 30000 }) => {
+const FundingChart = ({ raised = 9000, goal = 60000 }) => {
   const chartData = {
     labels: ['Raised', 'Remaining'],
     datasets: [
       {
-        data: [raised, goal - raised],
+        data: [raised, Math.max(goal - raised, 0)],
         backgroundColor: ['#500000', '#e2e8f0'],
         borderColor: ['#6e0000', '#cbd5e1'],
         borderWidth: 1

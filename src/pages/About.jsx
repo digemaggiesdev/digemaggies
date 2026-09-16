@@ -4,28 +4,52 @@ import { coreValues, facultyAdvisor, executiveTeam } from '../data/siteData';
 
 const subteamsData = [
   {
-    name: 'Mechanical & Chassis',
-    lead: 'Cutterhead & Jacking Frame',
-    image: '/assets/team/groups/Chassis.JPG',
-    description: 'Engineers high-torque disc cutters, structural steel frame, and soil displacement dynamics.'
+    name: 'Cutterhead/Chassis',
+    lead: 'Drive Train & Articulation',
+    image: '/assets/team/groups/cutterhead.jpeg',
+    description: 'Designs the four-spoke cutterhead, 80:1 gearbox drive train, muck chamber, bearing support, and segmented chassis that allows the cutterhead to articulate.'
   },
   {
-    name: 'Hydraulics & Propulsion',
-    lead: 'Axial Thrust Assembly',
+    name: 'Extraction',
+    lead: 'Slurry & Muck Removal',
+    image: '/assets/team/groups/Muck.jpeg',
+    description: 'Creates the bentonite-and-water slurry process, including the injection pump, inflow line, outflow line, and vacuum-truck connection used to remove excavated muck.'
+  },
+  {
+    name: 'Propulsion',
+    lead: 'HPU, Pipe Jacking & Steering',
     image: '/assets/team/groups/hydraulics.jpeg',
-    description: 'Designs multi-cylinder hydraulic ring systems and micro-steering direction actuators.'
+    description: 'Develops the electric HPU, pipe-jacking system, hydraulic cylinders, and electro-hydraulic actuators that provide thrust and control the cutterhead direction.'
   },
   {
-    name: 'Electronics & Software',
-    lead: 'Underground Telemetry',
+    name: 'Tunnel Lining',
+    lead: 'Steel Segments & Cradle',
+    image: '/assets/team/groups/Chassis.JPG',
+    description: 'Designs the steel tunnel segments that provide a thrust surface and maintain alignment, along with the cradle that supports the TBM and segments during mining.'
+  },
+  {
+    name: 'Electronics',
+    lead: 'Power, Sensors & Safety',
     image: '/assets/team/groups/electronics_software.jpeg',
-    description: 'Integrates CAN bus diagnostic arrays, remote control dashboards, and automated laser guidance.'
+    description: 'Builds the power distribution and safety systems, including the 480 V three-phase input, VFD, control power supplies, sensors, relays, and emergency-stop circuitry.'
   },
   {
-    name: 'Business & Operations',
-    lead: 'Sponsorship & Outreach',
+    name: 'Software',
+    lead: 'Controls, HMI & Telemetry',
+    image: '/assets/team/groups/electronics_software.jpeg',
+    description: 'Develops the Raspberry Pi operator interface, serial communication with the onboard controller, machine controls, safety interlocks, telemetry displays, and sensor data visualization.'
+  },
+  {
+    name: 'Business',
+    lead: 'Funding, Logistics & Outreach',
     image: '/assets/team/groups/business.jpeg',
-    description: 'Manages organization finances, corporate sponsor relations, logistics, and STEM outreach.'
+    description: 'Coordinates sponsorships, fundraising, purchasing, meeting and fabrication space, testing arrangements, transportation, housing, team communications, and the website.'
+  },
+  {
+    name: 'Integration',
+    lead: 'Subsystem Testing & Full-Machine Validation',
+    image: '/assets/team/groups/Chassis.JPG',
+    description: 'Coordinates virtual integration, subsystem test protocols, mock integration tests, full-system testing, mining procedures, and final preparation for competition.'
   }
 ];
 
@@ -120,22 +144,22 @@ const About = () => {
           <div className="hero-left">
             <div className="hero-status-pill">
               <span className="pulse-dot"></span>
-              <span>TEXAS A&amp;M ENGINEERING • WHO WE ARE</span>
+              <span>DIG 'EM AGGIES • WHO WE ARE</span>
             </div>
             <div className="eyebrow">Aggie Spirit &amp; Innovation</div>
             <h1 className="hero-title">
               Advancing <span className="highlight-gold">Tunneling</span> Technology
             </h1>
             <p className="lead">
-              Dig 'Em Aggies is a student organization at Texas A&amp;M University dedicated to designing, manufacturing, and competing with cutting-edge tunnel boring machines.
+              Dig 'Em Aggies is a student organization dedicated to designing, manufacturing, and competing with cutting-edge tunnel boring machines.
             </p>
 
             <div className="hero-highlights">
               <div className="highlight-badge">
-                <i className="fas fa-users"></i> 47 Active Members
+                <i className="fas fa-ruler-horizontal"></i> 24 in TBM Diameter
               </div>
               <div className="highlight-badge">
-                <i className="fas fa-graduation-cap"></i> 13 Engineering Majors
+                <i className="fas fa-arrows-alt-h"></i> 30 m Target Tunnel
               </div>
               <div className="highlight-badge">
                 <i className="fas fa-trophy"></i> NABC Competitor
@@ -170,8 +194,8 @@ const About = () => {
                 />
               </div>
               <div className="showcase-info">
-                <h3>Texas A&amp;M Engineering Team</h3>
-                <p className="showcase-tagline">College Station, TX • Established 2024</p>
+                <h3>Dig 'Em Aggies Engineering Team</h3>
+                <p className="showcase-tagline">College Station, TX • Texas A&amp;M student engineering team</p>
                 <div className="showcase-mini-specs">
                   <div>
                     <span>Location</span>
@@ -220,7 +244,7 @@ const About = () => {
             <p className="eyebrow">Multidisciplinary Engineering</p>
             <h2 style={{ fontSize: '2.2rem', fontWeight: 800 }}>Our Engineering Subteams</h2>
             <p style={{ color: 'var(--text-muted)' }}>
-              From mechanical structures to high-voltage electronics and business operations, every discipline plays a key role.
+              From the cutterhead and slurry system to controls, logistics, and full-machine testing, every discipline has a defined role in the PDB design.
             </p>
           </div>
           <div className="subteams-grid">
@@ -277,24 +301,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Callout Banner */}
-        <section className="card sae-more-info">
-          <h2>WANT TO BE PART OF OUR TEAM?</h2>
-          <p>We welcome students of all engineering majors and business disciplines to join Dig 'Em Aggies.</p>
-          <div className="sae-info-buttons">
-            <a
-              className="btn"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfNeXj2ak7DiV2z1p9yebl-AG6lfPLEmqDUrjRVBVyt0r4-bA/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Apply Now
-            </a>
-            <Link className="btn btn-secondary" to="/contact">
-              Contact Executive Officers
-            </Link>
-          </div>
-        </section>
       </div>
     </div>
   );

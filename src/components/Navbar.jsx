@@ -36,8 +36,8 @@ const Navbar = () => {
 
           <div className={`nav-links ${isOpen ? 'open' : ''}`} id="main-navigation">
             <div className="mobile-nav-header">
-              <span className="mobile-nav-title">Texas A&amp;M Tunneling</span>
-              <p className="mobile-nav-subtitle">Dig 'Em Aggies NABC Team</p>
+              <span className="mobile-nav-title">Dig 'Em Aggies</span>
+              <p className="mobile-nav-subtitle">NABC Tunnel Boring Team</p>
             </div>
             <Link
               to="/"

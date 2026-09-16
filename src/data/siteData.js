@@ -1,15 +1,15 @@
 export const projectsData = [
   {
     id: 'tbm-2025',
-    title: 'Aggie Boring Machine Mk-II',
+    title: 'Boring Machine Mk-I',
     category: 'Current Build',
-    tagline: 'Horizontal Earth Pressure Balance TBM for Bastrop NABC 2025',
-    description: 'Designed from the ground up by Texas A&M engineering students to navigate complex geological soil conditions while maintaining directional control and automated liner placement.',
+    tagline: 'Curved microtunneling TBM for a 30-meter competition tunnel',
+    description: 'Designed by Dig ‘Em Aggies engineers with a four-spoke cutterhead, segmented chassis, pipe-jacking propulsion, slurry extraction, and tunnel lining systems.',
     image: '/assets/renders/Render1.png',
     specs: [
       { label: 'Target Distance', value: '30 Meters' },
-      { label: 'Tunnel Diameter', value: '0.5 Meters' },
-      { label: 'Power Source', value: '100% Electric' },
+      { label: 'Outer Diameter', value: '24 Inches' },
+      { label: 'Power Source', value: '7.5 hp Electric HPU' },
       { label: 'Subsystem Focus', value: 'Cutterhead & Propulsion' }
     ]
   },
@@ -18,13 +18,13 @@ export const projectsData = [
     title: 'Cutterhead & Excavation System',
     category: 'Subsystem',
     tagline: 'High-torque soil cutting wheel with custom tooth geometry',
-    description: 'Features high-durability carbide tooth cutting disc arrays engineered to break down clay and consolidated soils efficiently with zero chemical or additive residue.',
+    description: 'Uses an open-faced, four-spoke cutterhead and mixer bars to break down soil and form slurry with conditioning fluid.',
     image: '/assets/renders/Render3.png',
     specs: [
       { label: 'Drive System', value: 'High-Torque Hydraulic/Electric' },
-      { label: 'RPM Range', value: '15 - 40 RPM' },
-      { label: 'Geology', value: 'Clay & Sand Matrix' },
-      { label: 'Environmental Impact', value: 'Additive Free' }
+      { label: 'Operating Speed', value: '4.125 RPM' },
+      { label: 'Soil Conditioning', value: 'Bentonite Slurry' },
+      { label: 'Cutterhead', value: '27-Inch Open Face' }
     ]
   },
   {
@@ -35,8 +35,8 @@ export const projectsData = [
     description: 'Provides continuous forward force and micro-adjustments required to maintain laser-guided trajectory during underground boring.',
     image: '/assets/team/homepage.jpg',
     specs: [
-      { label: 'Max Thrust Force', value: '120 kN' },
-      { label: 'Steering Control', value: '3-Axis Articulated Ring' },
+      { label: 'Max Thrust Force', value: '1,136 kN' },
+      { label: 'Steering Control', value: '2 Electro-Hydraulic Actuators' },
       { label: 'Guidance', value: 'Laser Target Sensor System' },
       { label: 'Liner Integration', value: 'Automated Segment Jacking' }
     ]
@@ -50,25 +50,25 @@ export const projectsData = [
     image: '/assets/team/home2.jpg',
     specs: [
       { label: 'Data Bus', value: 'CAN bus & Fiber Ethernet' },
-      { label: 'Sensor Nodes', value: '32 Active Diagnostics' },
-      { label: 'Operator UI', value: 'Custom React Dashboards' },
-      { label: 'Safety Cutoff', value: '< 50ms Emergency E-stop' }
+      { label: 'Listed Sensors', value: '19 Sensor Units' },
+      { label: 'Operator UI', value: 'Raspberry Pi Interface' },
+      { label: 'Safety System', value: 'PNOZ S5 E-Stop Relay' }
     ]
   }
 ];
 
 export const machineTelemetry = [
-  { value: '120 kN', label: 'Max Axial Thrust', subtext: 'Hydraulic Propulsion Ring' },
-  { value: '0.5 M', label: 'Boring Diameter', subtext: '100% Additive-Free' },
-  { value: '30 M', label: 'Target Dig Length', subtext: 'NABC Bastrop Track' },
-  { value: '< 50 ms', label: 'Emergency E-Stop', subtext: 'Active CAN Bus Telemetry' },
-  { value: '100%', label: 'Electric Power', subtext: 'Zero Geological Emissions' }
+  { value: '1,136 kN', label: 'Maximum Thrust', subtext: 'Eight-cylinder pipe-jacking system' },
+  { value: '24 in', label: 'TBM Outer Diameter', subtext: '23 in tunnel-lining inner diameter' },
+  { value: '30 m', label: 'Target Tunnel Distance', subtext: '25 four-foot segments' },
+  { value: '4.125 RPM', label: 'Cutterhead Speed', subtext: '5 GPM HPU flow rate' },
+  { value: '4.5 kN·m', label: 'Continuous Torque', subtext: 'Gearbox-limited cutterhead output' }
 ];
 
 export const teamStats = [
-  { target: 47, label: 'Active Members' },
-  { target: 13, label: 'Engineering Majors' },
-  { target: 5, label: 'Class Years' }
+  { target: 24, suffix: ' in', label: 'TBM Outer Diameter' },
+  { target: 5, suffix: ' ft', label: 'TBM Length' },
+  { target: 2000, suffix: ' lb', label: 'TBM Weight' }
 ];
 
 export const engineeringMilestones = [
@@ -76,28 +76,28 @@ export const engineeringMilestones = [
     phase: '01',
     title: 'CAD & Soil Mechanics Modeling',
     status: 'In Progress',
-    date: 'Fall 2024',
+    date: 'Summer',
     description: 'FEA structural simulation of the cutterhead wheel and 3D modeling of soil displacement under Bastrop clay conditions.'
   },
   {
     phase: '02',
     title: 'Gearbox & Propulsion Fabrication',
     status: 'Upcoming',
-    date: 'Early Spring 2025',
+    date: 'August - October',
     description: 'Precision CNC machining of disc cutter teeth, hydraulic manifold assembly, and axial jacking frame welding.'
   },
   {
     phase: '03',
     title: 'Telemetry & Surface Control Deck',
     status: 'Upcoming',
-    date: 'Mid Spring 2025',
+    date: 'November - February',
     description: 'Integrating 32 live diagnostic nodes, CAN bus telemetry, laser target guidance, and operator React dashboards.'
   },
   {
     phase: '04',
     title: 'Field Testing & Bastrop NABC Dig',
     status: 'Upcoming',
-    date: 'Competition Week',
+    date: 'March',
     description: 'Deploying the machine underground in Bastrop, TX for full-scale 30-meter autonomous horizontal boring.'
   }
 ];
@@ -131,7 +131,7 @@ export const coreValues = [
   {
     icon: 'fa-leaf',
     title: 'Sustainability',
-    description: 'Dig ‘Em Aggies is focused on minimizing geological impact and protecting ecosystems by rejecting unnatural additives and being 100% electrically powered.'
+    description: 'Dig ‘Em Aggies uses an electrically powered HPU and a controlled bentonite-based slurry system to support the tunneling process.'
   },
   {
     icon: 'fa-chalkboard-teacher',
@@ -215,7 +215,7 @@ export const sponsorsData = {
 export const faqList = [
   {
     question: "What is Dig 'Em Aggies?",
-    answer: "Dig 'Em Aggies is a student-led engineering team at Texas A&M University focused on tunnel boring machine design, construction, and innovation."
+    answer: "Dig 'Em Aggies is a student-led engineering team, officially affiliated with Texas A&M University, focused on tunnel boring machine design, construction, and innovation."
   },
   {
     question: "What is the Not-a-Boring Competition?",

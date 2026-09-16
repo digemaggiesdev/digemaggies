@@ -4,10 +4,10 @@ import ContactForm from '../components/ContactForm';
 import { sponsorsData } from '../data/siteData';
 
 const sponsorMetrics = [
-  { value: '$30,000', label: '2025 Build Budget Goal', subtext: 'Raw Materials & Components' },
-  { value: '47+', label: 'Aggie Engineers Reached', subtext: 'Multidisciplinary Majors' },
-  { value: '100%', label: 'Tax Deductible Partner', subtext: 'Student Organization RSO' },
-  { value: 'Bastrop, TX', label: 'Live Dig Site Showcase', subtext: 'Not-a-Boring Competition' }
+  { value: '$9,000', label: 'Funding raised', subtext: 'of $60,000 goal' },
+  { value: '$60,000', label: 'Funding goal', subtext: 'Current competition campaign' },
+  { value: '7.5 kW', label: 'Total power budget', subtext: 'Electrical and hydraulic systems' },
+  { value: '30 m', label: 'Target tunnel length', subtext: '25 four-foot segments' }
 ];
 
 const Sponsor = () => {
@@ -101,7 +101,7 @@ const Sponsor = () => {
           <div className="hero-left">
             <div className="hero-status-pill">
               <span className="pulse-dot"></span>
-              <span>TEXAS A&amp;M NABC • SPONSORSHIP OPPORTUNITIES</span>
+              <span>DIG 'EM AGGIES • SPONSORSHIP OPPORTUNITIES</span>
             </div>
             <div className="eyebrow">Support Student Innovation</div>
             <h1 className="hero-title">
@@ -136,14 +136,14 @@ const Sponsor = () => {
           <div className="hero-right">
             <div className="hero-showcase-card floating-animation">
               <div className="showcase-badge">
-                <span className="live-dot"></span> 2026 FUNDING CAMPAIGN
+                <span className="live-dot"></span> FUNDING PROGRESS
               </div>
               <div style={{ padding: '1rem 0' }}>
-                <FundingChart raised={1000} goal={30000} />
+                <FundingChart raised={9000} goal={60000} />
               </div>
               <div className="showcase-info" style={{ textAlign: 'center' }}>
-                <h3>Help Us Reach $30,000</h3>
-                <p className="showcase-tagline">Not-a-Boring Competition Bastrop Dig Track</p>
+                <h3>Help Us Reach $60,000</h3>
+                <p className="showcase-tagline">Join the mission today!</p>
               </div>
             </div>
           </div>
@@ -175,7 +175,7 @@ const Sponsor = () => {
         <div className="sponsor-tiers">
           {/* Gold Tier */}
           <section className="sponsor-tier-card gold">
-            <h2>Gold Sponsors ($1,000+)</h2>
+            <h2>Gold Sponsors</h2>
             <div className="tier-bar"></div>
             <ul className="tier-benefits">
               <li>All Maroon tier benefits</li>
@@ -194,7 +194,7 @@ const Sponsor = () => {
 
           {/* Silver Tier */}
           <section className="sponsor-tier-card silver">
-            <h2>Silver Sponsors ($500+)</h2>
+            <h2>Silver Sponsors</h2>
             <div className="tier-bar"></div>
             <ul className="tier-benefits">
               <li>All Maroon tier benefits</li>
@@ -213,7 +213,7 @@ const Sponsor = () => {
 
           {/* Maroon Tier */}
           <section className="sponsor-tier-card maroon">
-            <h2>Maroon Sponsors ($100+)</h2>
+            <h2>Maroon Sponsors</h2>
             <div className="tier-bar"></div>
             <ul className="tier-benefits">
               <li>Company logo on official t-shirts</li>
@@ -239,6 +239,7 @@ const Sponsor = () => {
             <p className="eyebrow">Let’s Build The Future Underground</p>
             <h1 style={{ fontSize: '2.5rem' }}>Start a Sponsorship Conversation</h1>
             <p>Tell us what you have in mind. We’ll follow up with sponsorship details, partnership opportunities, and ways your organization can support the build.</p>
+            <p>Dig 'Em Aggies is a registered student organization at Texas A&amp;M University, giving your partnership a credible, tax-deductible home within one of the nation's top engineering programs.</p>
             <a className="contact-email" href="mailto:digem.team@gmail.com">
               digem.team@gmail.com <span aria-hidden="true">→</span>
             </a>
