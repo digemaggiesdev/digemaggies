@@ -263,7 +263,7 @@ const Home = () => {
                   </div>
                   <div>
                     <span>Drive</span>
-                    <strong>High-Torque Electric</strong>
+                    <strong>High-Torque Hydraulic</strong>
                   </div>
                   <div>
                     <span>Guidance</span>

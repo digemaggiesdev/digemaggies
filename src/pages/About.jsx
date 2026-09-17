@@ -6,49 +6,49 @@ const subteamsData = [
   {
     name: 'Cutterhead/Chassis',
     lead: 'Drive Train & Articulation',
-    image: '/assets/team/groups/cutterhead.jpeg',
+    image: '/assets/team/subteams/Cutterhead Chassis.jpg',
     description: 'Designs the four-spoke cutterhead, 80:1 gearbox drive train, muck chamber, bearing support, and segmented chassis that allows the cutterhead to articulate.'
   },
   {
     name: 'Extraction',
     lead: 'Slurry & Muck Removal',
-    image: '/assets/team/groups/Muck.jpeg',
+    image: '/assets/team/subteams/Extraction.jpg',
     description: 'Creates the bentonite-and-water slurry process, including the injection pump, inflow line, outflow line, and vacuum-truck connection used to remove excavated muck.'
   },
   {
     name: 'Propulsion',
     lead: 'HPU, Pipe Jacking & Steering',
-    image: '/assets/team/groups/hydraulics.jpeg',
+    image: '/assets/team/subteams/Propulsion.jpg',
     description: 'Develops the electric HPU, pipe-jacking system, hydraulic cylinders, and electro-hydraulic actuators that provide thrust and control the cutterhead direction.'
   },
   {
     name: 'Tunnel Lining',
     lead: 'Steel Segments & Cradle',
-    image: '/assets/team/groups/Chassis.JPG',
+    image: '/assets/team/subteams/Tunnel_Lining.jpg',
     description: 'Designs the steel tunnel segments that provide a thrust surface and maintain alignment, along with the cradle that supports the TBM and segments during mining.'
   },
   {
     name: 'Electronics',
     lead: 'Power, Sensors & Safety',
-    image: '/assets/team/groups/electronics_software.jpeg',
+    image: '/assets/team/subteams/Electrical.jpg',
     description: 'Builds the power distribution and safety systems, including the 480 V three-phase input, VFD, control power supplies, sensors, relays, and emergency-stop circuitry.'
   },
   {
     name: 'Software',
     lead: 'Controls, HMI & Telemetry',
-    image: '/assets/team/groups/electronics_software.jpeg',
+    image: '/assets/team/subteams/Software.jpg',
     description: 'Develops the Raspberry Pi operator interface, serial communication with the onboard controller, machine controls, safety interlocks, telemetry displays, and sensor data visualization.'
   },
   {
     name: 'Business',
     lead: 'Funding, Logistics & Outreach',
-    image: '/assets/team/groups/business.jpeg',
+    image: '/assets/team/subteams/Business.jpg',
     description: 'Coordinates sponsorships, fundraising, purchasing, meeting and fabrication space, testing arrangements, transportation, housing, team communications, and the website.'
   },
   {
     name: 'Integration',
     lead: 'Subsystem Testing & Full-Machine Validation',
-    image: '/assets/team/groups/Chassis.JPG',
+    image: '/assets/team/subteams/Integration.jpg',
     description: 'Coordinates virtual integration, subsystem test protocols, mock integration tests, full-system testing, mining procedures, and final preparation for competition.'
   }
 ];
@@ -151,7 +151,7 @@ const About = () => {
               Advancing <span className="highlight-gold">Tunneling</span> Technology
             </h1>
             <p className="lead">
-              Dig 'Em Aggies is a student organization dedicated to designing, manufacturing, and competing with cutting-edge tunnel boring machines.
+              Dig 'Em Aggies is a student engineering team focused on designing, building, and competing with tunnel boring technology.
             </p>
 
             <div className="hero-highlights">
@@ -170,13 +170,8 @@ const About = () => {
               <a className="btn" href="#leadership">
                 Meet Executive Team <span aria-hidden="true">↓</span>
               </a>
-              <a
-                className="btn btn-secondary"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfNeXj2ak7DiV2z1p9yebl-AG6lfPLEmqDUrjRVBVyt0r4-bA/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Join The Team <span aria-hidden="true">→</span>
+              <a className="btn btn-secondary" href="#subteams">
+                Explore Subteams <span aria-hidden="true">↓</span>
               </a>
             </div>
           </div>
@@ -194,22 +189,11 @@ const About = () => {
                 />
               </div>
               <div className="showcase-info">
-                <h3>Dig 'Em Aggies Engineering Team</h3>
-                <p className="showcase-tagline">College Station, TX • Texas A&amp;M student engineering team</p>
-                <div className="showcase-mini-specs">
-                  <div>
-                    <span>Location</span>
-                    <strong>College Station</strong>
-                  </div>
-                  <div>
-                    <span>Focus</span>
-                    <strong>Tunnel Boring</strong>
-                  </div>
-                  <div>
-                    <span>Motto</span>
-                    <strong>Dig 'Em Aggies</strong>
-                  </div>
-                </div>
+                <h3>Dig 'Em Aggies</h3>
+                <p className="showcase-tagline">A Texas A&amp;M student engineering team</p>
+                <p className="showcase-description">
+                  We design and build advanced tunnel boring systems while creating an experience that develops members through hands-on engineering, collaboration, and leadership.
+                </p>
               </div>
             </div>
           </div>
@@ -242,7 +226,7 @@ const About = () => {
         <section className="card subteams-section" id="subteams">
           <div className="faq-header" style={{ textAlign: 'left', marginBottom: '2rem' }}>
             <p className="eyebrow">Multidisciplinary Engineering</p>
-            <h2 style={{ fontSize: '2.2rem', fontWeight: 800 }}>Our Engineering Subteams</h2>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: 800 }}>Our Subteams</h2>
             <p style={{ color: 'var(--text-muted)' }}>
               From the cutterhead and slurry system to controls, logistics, and full-machine testing, every discipline has a defined role in the PDB design.
             </p>

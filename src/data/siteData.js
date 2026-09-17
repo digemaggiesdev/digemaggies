@@ -182,7 +182,7 @@ export const executiveTeam = [
   {
     name: 'Diogo Bandeira',
     role: 'Chief Underclassman Officer',
-    classMajor: "'29 ENGR",
+    classMajor: "'29 MEEN",
     image: '/assets/team/leadership/diogo_final.jpg',
     linkedin: 'https://www.linkedin.com/in/diogo-bandeira-29993b385/'
   }
