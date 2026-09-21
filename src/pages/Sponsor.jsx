@@ -157,7 +157,8 @@ const Sponsor = () => {
                 >
                   Donate Now <span aria-hidden="true">→</span>
                 </a>
-                <p style={{ fontSize: '0.8rem', marginTop: '0.5rem', opacity: 0.8 }}>
+                <p className="donation-instruction donation-instruction-hero">
+                  <strong>Important:</strong>{' '}
                   Please select student organization then enter "Dig 'Em Aggies" in the Gift Notes section so your gift is directed to our team.
                 </p>
               </div>
@@ -261,7 +262,7 @@ const Sponsor = () => {
           <div className="donate-cta-content">
             <p className="eyebrow">Support The Build</p>
             <h2>Prefer To Donate Directly?</h2>
-            <p>Not a corporate partner? You can still make a financial gift of any size directly to Dig 'Em Aggies.</p>
+            <p>Whether you are a corporate partner or an individual supporter, you can make a financial gift of any size directly to Dig 'Em Aggies.</p>
           </div>
           <div className="donate-cta-action">
             <a
@@ -273,6 +274,7 @@ const Sponsor = () => {
               Donate Now <span aria-hidden="true">→</span>
             </a>
             <p className="donate-cta-note">
+              <strong>Important:</strong>{' '}
               Please select student organization then enter "Dig 'Em Aggies" in the Gift Notes section so your gift is directed to our team.
             </p>
           </div>

@@ -194,6 +194,7 @@ const Contact = () => {
               Donate Now <span aria-hidden="true">→</span>
             </a>
             <p className="donate-cta-note">
+              <strong>Important:</strong>{' '}
               Please select student organization then enter "Dig 'Em Aggies" in the Gift Notes section so your gift is directed to our team.
             </p>
           </div>
