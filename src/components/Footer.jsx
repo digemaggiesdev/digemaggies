@@ -41,7 +41,18 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Dig 'Em Aggies. All rights reserved. Developed by Jbbennett.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Dig 'Em Aggies. All rights reserved. Developed by{' '}
+            <a
+              href="https://www.linkedin.com/in/josh-bennett-0291273b0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-credit-linkedin"
+            >
+              Jbbennett <i className="fab fa-linkedin"></i>
+            </a>
+            .
+          </p>
         </div>
       </div>
     </footer>

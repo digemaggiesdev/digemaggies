@@ -258,15 +258,15 @@ const Home = () => {
                 <p className="showcase-tagline">Earth Pressure Balance Horizontal TBM</p>
                 <div className="showcase-mini-specs">
                   <div>
-                    <span>Diameter</span>
+                    <span>Diameter: </span>
                     <strong>24 Inches</strong>
                   </div>
                   <div>
-                    <span>Drive</span>
+                    <span>Drive: </span>
                     <strong>High-Torque Hydraulic</strong>
                   </div>
                   <div>
-                    <span>Guidance</span>
+                    <span>Guidance: </span>
                     <strong>Laser Sensor Target</strong>
                   </div>
                 </div>

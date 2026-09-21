@@ -71,14 +71,6 @@ const Navbar = () => {
               <i className="fas fa-envelope mobile-nav-icon"></i>
               <span>Contact</span>
             </Link>
-            <Link
-              to="/sponsor"
-              className="nav-cta mobile-nav-cta"
-              onClick={closeMenu}
-            >
-              <span>Sponsor Us</span>
-              <span className="nav-cta-arrow" aria-hidden="true">→</span>
-            </Link>
             <div className="mobile-nav-footer">
               <div className="mobile-social-links">
                 <a

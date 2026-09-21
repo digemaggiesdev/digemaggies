@@ -144,6 +144,18 @@ const Sponsor = () => {
               <div className="showcase-info" style={{ textAlign: 'center' }}>
                 <h3>Help Us Reach $60,000</h3>
                 <p className="showcase-tagline">Join the mission today!</p>
+                <a
+                  className="btn"
+                  href="https://myaggieland.txamfoundation.com/tamf/give"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginTop: '0.75rem', display: 'inline-block' }}
+                >
+                  Donate Now <span aria-hidden="true">→</span>
+                </a>
+                <p style={{ fontSize: '0.8rem', marginTop: '0.5rem', opacity: 0.8 }}>
+                  Please enter "Dig 'Em Aggies" or 947090-00000 in the Gift Notes section so your gift is directed to our team.
+                </p>
               </div>
             </div>
           </div>
@@ -232,6 +244,31 @@ const Sponsor = () => {
             </div>
           </section>
         </div>
+
+        {/* Donate Section */}
+        <section className="card donate-cta">
+          <div className="donate-cta-icon">
+            <i className="fas fa-hand-holding-heart"></i>
+          </div>
+          <div className="donate-cta-content">
+            <p className="eyebrow">Support The Build</p>
+            <h2>Prefer To Donate Directly?</h2>
+            <p>Not a corporate partner? You can still make a financial gift of any size directly to Dig 'Em Aggies.</p>
+          </div>
+          <div className="donate-cta-action">
+            <a
+              className="btn"
+              href="https://myaggieland.txamfoundation.com/tamf/give"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Donate Now <span aria-hidden="true">→</span>
+            </a>
+            <p className="donate-cta-note">
+              Please enter "Dig 'Em Aggies" or 947090-00000 in the Gift Notes section so your gift is directed to our team.
+            </p>
+          </div>
+        </section>
 
         {/* Sponsor Contact Section */}
         <section id="sponsor-contact" className="card contact-section">

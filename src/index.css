@@ -1799,10 +1799,21 @@ nav {
 }
 
 .leadership-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.75rem;
   margin-top: 2rem;
+}
+
+.leadership-grid .leader-card {
+  flex: 0 1 260px;
+}
+
+@media (min-width: 1200px) {
+  .leadership-grid .leader-card {
+    flex-basis: 200px;
+  }
 }
 
 .leader-card {
@@ -2141,6 +2152,69 @@ nav {
   opacity: 0.8;
 }
 
+.contact-reasons {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.contact-reasons li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.contact-reasons li i {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(80, 0, 0, 0.08);
+  color: var(--tamu-maroon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.contact-intro-extra {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.contact-intro-social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.contact-intro-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tamu-maroon);
+  font-size: 1.05rem;
+  transition: all var(--transition-normal);
+}
+
+.contact-intro-social a:hover {
+  background: var(--tamu-maroon);
+  border-color: var(--tamu-maroon);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
 .contact-form-wrapper {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
@@ -2240,6 +2314,75 @@ nav {
   }
 }
 
+.donate-cta {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  border-left: 4px solid var(--gold-bright, #d4af37);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.06), transparent 60%);
+}
+
+.donate-cta-icon {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--gold-bright, #d4af37), #b8860b);
+  color: #ffffff;
+  font-size: 1.8rem;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
+}
+
+.donate-cta-content {
+  flex: 1;
+  min-width: 240px;
+}
+
+.donate-cta-content h2 {
+  font-size: 1.9rem;
+  font-weight: 900;
+  margin: 0.3rem 0 0.6rem;
+  color: var(--text-main);
+}
+
+.donate-cta-content p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.donate-cta-action {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  max-width: 220px;
+}
+
+.donate-cta-note {
+  font-size: 0.78rem;
+  color: var(--text-subtle);
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 750px) {
+  .donate-cta {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .donate-cta-action {
+    max-width: 100%;
+  }
+}
+
 /* ==========================================================================
    FOOTER (Deep TAMU Maroon)
    ========================================================================== */
@@ -2317,6 +2460,19 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   color: #b3a1a4;
   font-size: 0.88rem;
+}
+
+.footer-credit-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #ffffff;
+  font-weight: 700;
+  transition: color var(--transition-fast);
+}
+
+.footer-credit-linkedin:hover {
+  color: var(--gold-bright);
 }
 
 /* ==========================================================================

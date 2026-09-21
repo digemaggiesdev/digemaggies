@@ -166,7 +166,33 @@ const Contact = () => {
         </div>
       </section>
 
-      <div className="container" style={{ marginTop: '3.5rem' }} id="contact-form-section">
+      <div className="container" style={{ marginTop: '3.5rem' }}>
+        <section className="card donate-cta">
+          <div className="donate-cta-icon">
+            <i className="fas fa-hand-holding-heart"></i>
+          </div>
+          <div className="donate-cta-content">
+            <p className="eyebrow">Support The Build</p>
+            <h2>Want To Donate Instead?</h2>
+            <p>Every financial gift, no matter the size, goes directly toward supporting Dig 'Em Aggies.</p>
+          </div>
+          <div className="donate-cta-action">
+            <a
+              className="btn"
+              href="https://myaggieland.txamfoundation.com/tamf/give"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Donate Now <span aria-hidden="true">→</span>
+            </a>
+            <p className="donate-cta-note">
+              Please enter "Dig 'Em Aggies" or 947090-00000 in the Gift Notes section so your gift is directed to our team.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div className="container" style={{ marginTop: '2rem' }} id="contact-form-section">
         <section className="card contact-section">
           <div className="contact-intro">
             <p className="eyebrow">Direct Inquiry</p>
@@ -175,6 +201,32 @@ const Contact = () => {
             <a className="contact-email" href="mailto:digem.team@gmail.com">
               digem.team@gmail.com <span aria-hidden="true">→</span>
             </a>
+
+            <ul className="contact-reasons">
+              <li>
+                <i className="fas fa-comments"></i>
+                <span>Have a question about the team or our project? Just ask.</span>
+              </li>
+              <li>
+                <i className="fas fa-handshake"></i>
+                <span>Looking to sponsor or partner? Let us know your organization's goals.</span>
+              </li>
+              <li>
+                <i className="fas fa-graduation-cap"></i>
+                <span>Faculty or department inquiry? We'd love to collaborate.</span>
+              </li>
+            </ul>
+
+            <div className="contact-intro-extra">
+              <div className="contact-intro-social">
+                <a href="https://www.instagram.com/dig.em.aggies/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tamu-dig-em-aggies/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
           </div>
 
           <ContactForm formTitle="Start a conversation." isSponsorForm={false} />

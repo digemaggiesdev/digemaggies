@@ -127,8 +127,8 @@ const ContactForm = ({ formTitle = 'Start a conversation.', isSponsorForm = fals
             onChange={handleChange}
             placeholder={
               isSponsorForm
-                ? 'Tell us about your sponsorship goals or questions'
-                : 'Tell us about your inquiry, goals, or questions'
+                ? 'Tell us about your sponsorship inquiry'
+                : 'Tell us about your inquiry'
             }
             required
           ></textarea>
