@@ -2402,7 +2402,7 @@ nav {
   border: 1px solid var(--gold-bright);
   border-radius: var(--radius-sm);
   background: rgba(212, 175, 55, 0.16);
-  color: #ffffff;
+  color: var(--text-main);
   font-size: 0.88rem;
   font-weight: 700;
   line-height: 1.45;
@@ -2410,7 +2410,7 @@ nav {
 }
 
 .donation-instruction-hero strong {
-  color: var(--gold-bright);
+  color: var(--tamu-maroon);
 }
 
 @media (max-width: 750px) {
