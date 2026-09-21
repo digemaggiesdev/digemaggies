@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import FundingChart from '../components/FundingChart';
 import ContactForm from '../components/ContactForm';
 import { sponsorsData } from '../data/siteData';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const sponsorMetrics = [
   { value: '$9,000', label: 'Funding raised', subtext: 'of $60,000 goal' },
@@ -12,6 +13,7 @@ const sponsorMetrics = [
 
 const Sponsor = () => {
   const canvasRef = useRef(null);
+  const pageRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -89,8 +91,10 @@ const Sponsor = () => {
     };
   }, []);
 
+  useScrollReveal(pageRef);
+
   return (
-    <div className="sponsor-page">
+    <div className="sponsor-page" ref={pageRef}>
       {/* Funding Hero */}
       <section className="hero sponsor-hero-split">
         <div className="hero-bg" style={{ backgroundImage: "url('/assets/renders/Render3.png')" }}></div>
@@ -175,16 +179,20 @@ const Sponsor = () => {
             ))}
           </div>
         </div>
+
+        <svg className="hero-wave-divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,40 C240,100 480,0 720,30 C960,60 1200,110 1440,50 L1440,100 L0,100 Z"></path>
+        </svg>
       </section>
 
       <div className="container" style={{ marginTop: '3.5rem' }}>
-        <div className="sponsor-page-header" id="tiers">
+        <div className="sponsor-page-header reveal" id="tiers">
           <p className="eyebrow">Partnership Options</p>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 900 }}>Sponsorship Tiers</h1>
           <p>We offer tailored package benefits for corporate, departmental, and individual supporters.</p>
         </div>
 
-        <div className="sponsor-tiers">
+        <div className="sponsor-tiers reveal">
           {/* Gold Tier */}
           <section className="sponsor-tier-card gold">
             <h2>Gold Sponsors</h2>
@@ -246,7 +254,7 @@ const Sponsor = () => {
         </div>
 
         {/* Donate Section */}
-        <section className="card donate-cta">
+        <section className="card donate-cta reveal">
           <div className="donate-cta-icon">
             <i className="fas fa-hand-holding-heart"></i>
           </div>
@@ -271,7 +279,7 @@ const Sponsor = () => {
         </section>
 
         {/* Sponsor Contact Section */}
-        <section id="sponsor-contact" className="card contact-section">
+        <section id="sponsor-contact" className="card contact-section reveal">
           <div className="contact-intro">
             <p className="eyebrow">Let’s Build The Future Underground</p>
             <h1 style={{ fontSize: '2.5rem' }}>Start a Sponsorship Conversation</h1>

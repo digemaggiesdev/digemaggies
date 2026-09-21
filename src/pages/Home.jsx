@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProjectSelector from '../components/ProjectSelector';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import {
   teamStats,
   faqList,
@@ -47,6 +48,7 @@ const AnimatedCounter = ({ target, duration = 2000 }) => {
 
 const Home = () => {
   const canvasRef = useRef(null);
+  const pageRef = useRef(null);
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
   // FAQ Question Submission State
@@ -195,8 +197,10 @@ const Home = () => {
 
   const allSponsors = [...sponsorsData.gold, ...sponsorsData.silver, ...sponsorsData.maroon];
 
+  useScrollReveal(pageRef);
+
   return (
-    <div className="home-page">
+    <div className="home-page" ref={pageRef}>
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg" style={{ backgroundImage: "url('/assets/renders/Render1.png')" }}></div>
@@ -289,11 +293,15 @@ const Home = () => {
             ))}
           </div>
         </div>
+
+        <svg className="hero-wave-divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,40 C240,100 480,0 720,30 C960,60 1200,110 1440,50 L1440,100 L0,100 Z"></path>
+        </svg>
       </section>
 
       <div className="container" style={{ marginTop: '3rem' }}>
         {/* Mission Section */}
-        <section id="about" className="card mission-section">
+        <section id="about" className="card mission-section reveal">
           <div className="mission-container">
             <div className="mission-text">
               <p className="section-kicker">Purpose &amp; Direction</p>
@@ -317,7 +325,7 @@ const Home = () => {
         <ProjectSelector />
 
         {/* Team Section */}
-        <section className="card team-section">
+        <section className="card team-section reveal">
           <p className="section-kicker">Multi-Disciplinary Excellence</p>
           <h2 style={{ fontSize: '2.2rem', fontWeight: 800 }}>Machine Profile</h2>
           <div className="stats">
@@ -331,7 +339,7 @@ const Home = () => {
         </section>
 
         {/* Competition Section */}
-        <section className="card competition-section">
+        <section className="card competition-section reveal">
           <div className="competition-container">
             <div className="competition-text">
               <p className="section-kicker">The Global Challenge</p>
@@ -347,7 +355,7 @@ const Home = () => {
         </section>
 
         {/* Engineered for Impact — TAMU SAE Quote Block */}
-        <section className="card impact-section">
+        <section className="card impact-section reveal">
           <div className="impact-container">
             <p className="section-kicker">Engineered for Impact</p>
             <h2>Hear directly from our members about their experience with Dig 'Em Aggies.</h2>
@@ -365,7 +373,7 @@ const Home = () => {
         </section>
 
         {/* Build Process */}
-        <section className="build-process" aria-labelledby="build-process-title">
+        <section className="build-process reveal" aria-labelledby="build-process-title">
           <div className="process-heading">
             <p className="section-kicker">Engineering Lifecycle</p>
             <h2 id="build-process-title">How We Build</h2>
@@ -395,7 +403,7 @@ const Home = () => {
         </section>
 
         {/* Engineering Roadmap & Milestones (UW & Swissloop style) */}
-        <section className="card roadmap-section" id="roadmap">
+        <section className="card roadmap-section reveal" id="roadmap">
           <div className="process-heading">
             <p className="section-kicker">Season Milestones</p>
             <h2>Engineering Roadmap</h2>
@@ -422,7 +430,7 @@ const Home = () => {
         </section>
 
         {/* FAQ Accordion Section */}
-        <section className="card faq-section" id="faq">
+        <section className="card faq-section reveal" id="faq">
           <div className="faq-header">
             <p className="section-kicker">Frequently Asked Questions</p>
             <h2>Everything You Need to Know</h2>
@@ -511,7 +519,7 @@ const Home = () => {
         </section>
 
         {/* Sponsors Section */}
-        <section className="card sponsors-section" style={{ textAlign: 'center' }}>
+        <section className="card sponsors-section reveal" style={{ textAlign: 'center' }}>
           <p className="section-kicker">Industry &amp; Academic Partners</p>
           <h2 style={{ fontSize: '2.2rem', fontWeight: 800, marginBottom: '1rem' }}>Supported By Industry Leaders</h2>
           <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
@@ -539,7 +547,7 @@ const Home = () => {
         </section>
 
         {/* TAMU SAE Style Information Banner */}
-        <section className="card sae-more-info">
+        <section className="card sae-more-info reveal">
           <h2>WANT MORE INFORMATION?</h2>
           <p>Connect with Dig 'Em Aggies for recruitment, sponsorships, or general inquiries.</p>
           <div className="sae-info-buttons">

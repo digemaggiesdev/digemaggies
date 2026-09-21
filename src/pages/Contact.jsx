@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import ContactForm from '../components/ContactForm';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const contactInfoCards = [
   {
@@ -30,6 +31,7 @@ const contactInfoCards = [
 
 const Contact = () => {
   const canvasRef = useRef(null);
+  const pageRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -107,8 +109,10 @@ const Contact = () => {
     };
   }, []);
 
+  useScrollReveal(pageRef);
+
   return (
-    <div className="contact-page">
+    <div className="contact-page" ref={pageRef}>
       {/* Contact Hero Banner */}
       <section className="hero contact-hero-split">
         <div className="hero-bg" style={{ backgroundImage: "url('/assets/team/home2.jpg')" }}></div>
@@ -164,10 +168,14 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
+        <svg className="hero-wave-divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,40 C240,100 480,0 720,30 C960,60 1200,110 1440,50 L1440,100 L0,100 Z"></path>
+        </svg>
       </section>
 
       <div className="container" style={{ marginTop: '3.5rem' }}>
-        <section className="card donate-cta">
+        <section className="card donate-cta reveal">
           <div className="donate-cta-icon">
             <i className="fas fa-hand-holding-heart"></i>
           </div>
@@ -193,7 +201,7 @@ const Contact = () => {
       </div>
 
       <div className="container" style={{ marginTop: '2rem' }} id="contact-form-section">
-        <section className="card contact-section">
+        <section className="card contact-section reveal">
           <div className="contact-intro">
             <p className="eyebrow">Direct Inquiry</p>
             <h1 style={{ fontSize: '2.5rem' }}>Send Us A Direct Inquiry</h1>

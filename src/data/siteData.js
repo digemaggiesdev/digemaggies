@@ -1,3 +1,7 @@
+// To update the LinkedIn embed: open the post on LinkedIn, click the "..."
+// menu, choose "Embed this post", and paste the resulting iframe src below.
+export const linkedinEmbedUrl = '';
+
 export const projectsData = [
   {
     id: 'tbm-2025',
@@ -60,7 +64,6 @@ export const projectsData = [
 export const machineTelemetry = [
   { value: '1,136 kN', label: 'Maximum Thrust', subtext: 'Eight-cylinder pipe-jacking system' },
   { value: '24 in', label: 'TBM Outer Diameter', subtext: '23 in tunnel-lining inner diameter' },
-  { value: '30 m', label: 'Target Tunnel Distance', subtext: '25 four-foot segments' },
   { value: '4.125 RPM', label: 'Cutterhead Speed', subtext: '5 GPM HPU flow rate' },
   { value: '4.5 kN·m', label: 'Continuous Torque', subtext: 'Gearbox-limited cutterhead output' }
 ];

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { coreValues, facultyAdvisor, executiveTeam } from '../data/siteData';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const subteamsData = [
   {
@@ -55,6 +56,7 @@ const subteamsData = [
 
 const About = () => {
   const canvasRef = useRef(null);
+  const pageRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -132,8 +134,10 @@ const About = () => {
     };
   }, []);
 
+  useScrollReveal(pageRef);
+
   return (
-    <div className="about-page">
+    <div className="about-page" ref={pageRef}>
       {/* Hero Section */}
       <section className="hero about-hero-split">
         <div className="hero-bg" style={{ backgroundImage: "url('/assets/team/homepage.jpg')" }}></div>
@@ -198,11 +202,15 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        <svg className="hero-wave-divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,40 C240,100 480,0 720,30 C960,60 1200,110 1440,50 L1440,100 L0,100 Z"></path>
+        </svg>
       </section>
 
       <div className="container" style={{ marginTop: '3rem' }}>
         {/* Core Values */}
-        <section className="card core-values" id="core-values">
+        <section className="card core-values reveal" id="core-values">
           <div className="faq-header" style={{ textAlign: 'left', marginBottom: '2rem' }}>
             <p className="eyebrow">What Guides Us</p>
             <h2 style={{ fontSize: '2.2rem', fontWeight: 800 }}>Core Values</h2>
@@ -223,7 +231,7 @@ const About = () => {
         </section>
 
         {/* Subteams & Disciplines Showcase */}
-        <section className="card subteams-section" id="subteams">
+        <section className="card subteams-section reveal" id="subteams">
           <div className="faq-header" style={{ textAlign: 'left', marginBottom: '2rem' }}>
             <p className="eyebrow">Multidisciplinary Engineering</p>
             <h2 style={{ fontSize: '2.2rem', fontWeight: 800 }}>Our Subteams</h2>
@@ -248,7 +256,7 @@ const About = () => {
         </section>
 
         {/* Faculty Advisor */}
-        <section className="card faculty-advisor" id="faculty-advisor">
+        <section className="card faculty-advisor reveal" id="faculty-advisor">
           <p className="eyebrow">Technical Guidance</p>
           <h2 style={{ fontSize: '2.2rem', fontWeight: 800, marginBottom: '1.5rem' }}>Faculty Advisor</h2>
           <div className="advisor-card">
@@ -262,7 +270,7 @@ const About = () => {
         </section>
 
         {/* Executive Team */}
-        <section className="card leadership" id="leadership">
+        <section className="card leadership reveal" id="leadership">
           <p className="eyebrow">The Builders &amp; Leaders</p>
           <h2 style={{ fontSize: '2.2rem', fontWeight: 800, marginBottom: '1.5rem' }}>Executive Officers</h2>
           <div className="leadership-grid">
