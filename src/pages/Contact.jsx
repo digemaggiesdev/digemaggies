@@ -194,7 +194,7 @@ const Contact = () => {
               Donate Now <span aria-hidden="true">→</span>
             </a>
             <p className="donate-cta-note">
-              Please enter "Dig 'Em Aggies" or 947090-00000 in the Gift Notes section so your gift is directed to our team.
+              Please select student organization then enter "Dig 'Em Aggies" in the Gift Notes section so your gift is directed to our team.
             </p>
           </div>
         </section>
