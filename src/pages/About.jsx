@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import { coreValues, facultyAdvisor, executiveTeam } from '../data/siteData';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
+const teamOverviewStats = [
+  { value: '40', label: 'Team Members' },
+  { value: '4', label: 'Class Levels' },
+  { value: '10+', label: 'Different Majors' }
+];
+
 const subteamsData = [
   {
     name: 'Cutterhead/Chassis',
@@ -209,6 +215,25 @@ const About = () => {
       </section>
 
       <div className="container" style={{ marginTop: '3rem' }}>
+        {/* Team Overview */}
+        <section className="card team-section about-team-stats reveal" id="team-stats">
+          <div className="faq-header">
+            <p className="eyebrow">The People Behind the Machine</p>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: 800 }}>A Team Built Across Disciplines</h2>
+            <p style={{ color: 'var(--text-muted)' }}>
+              Our team brings together Aggies from every stage of their degree and a wide range of academic backgrounds.
+            </p>
+          </div>
+          <div className="stats">
+            {teamOverviewStats.map((stat) => (
+              <div key={stat.label} className="stat">
+                <h3>{stat.value}</h3>
+                <div>{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Core Values */}
         <section className="card core-values reveal" id="core-values">
           <div className="faq-header" style={{ textAlign: 'left', marginBottom: '2rem' }}>

@@ -199,7 +199,7 @@ const Sponsor = () => {
             <h2>Gold Sponsors</h2>
             <div className="tier-bar"></div>
             <ul className="tier-benefits">
-              <li>All Maroon tier benefits</li>
+              <li>All Maroon tier + Silver tier benefits</li>
               <li>Official team shirt &amp; hardhat</li>
               <li>Company meet-and-greet at team meeting</li>
               <li>Prominent large logo placement on TBM</li>

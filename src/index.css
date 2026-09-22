@@ -1179,6 +1179,15 @@ nav {
   text-align: center;
 }
 
+.about-team-stats .faq-header {
+  margin-bottom: 0;
+}
+
+.about-team-stats .faq-header p:last-child {
+  max-width: 680px;
+  margin: 0.75rem auto 0;
+}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

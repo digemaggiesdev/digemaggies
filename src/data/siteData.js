@@ -201,18 +201,10 @@ export const facultyAdvisor = {
 export const sponsorsData = {
   gold: [
     { name: 'Texas A&M Civil and Environmental Engineering', image: '/assets/sponsorship_images/CVEN_DEPT.png', url: 'https://engineering.tamu.edu/civil/index.html' },
-    { name: 'Onshape', image: '/assets/sponsorship_images/onshape.png', url: 'https://www.onshape.com/en/' },
-    { name: 'Spinks Solutions', image: '/assets/sponsorship_images/spinks_solution_llc.png', url: 'https://spinkssolutions.com/' },
-    { name: 'Zachry Construction Corporation', image: '/assets/sponsorship_images/zachary_coorporation.jpg', url: 'https://www.zachryconstructioncorp.com/' }
+    { name: 'Moses B. Glick', image: '/assets/sponsorship_images/mbglick-logo.png', url: 'https://mbglick.com/' }
   ],
-  silver: [
-    { name: 'Garver', image: '/assets/sponsorship_images/garver.png', url: 'https://garverusa.com/' },
-    { name: 'Dovetail', image: '/assets/sponsorship_images/Dovetail.jpg', url: 'https://www.dovetailwealth.com/' },
-    { name: 'Master Builders Solutions', image: '/assets/sponsorship_images/masterbuilders.png', url: 'https://master-builders-solutions.com/en-us/' }
-  ],
-  maroon: [
-    { name: 'Metzler Family', image: '/assets/sponsorship_images/Metzler_Family.png', url: '#contact' }
-  ]
+  silver: [],
+  maroon: []
 };
 
 export const faqList = [
