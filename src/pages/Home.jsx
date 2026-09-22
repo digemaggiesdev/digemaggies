@@ -295,11 +295,17 @@ const Home = () => {
         </div>
 
         <svg className="hero-wave-divider" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0,40 C240,100 480,0 720,30 C960,60 1200,110 1440,50 L1440,100 L0,100 Z"></path>
+          <defs>
+            <pattern id="paper-grid" width="36" height="36" patternUnits="userSpaceOnUse">
+              <rect width="36" height="36" fill="#e8ecf1"></rect>
+              <path d="M36 0H0V36" fill="none" stroke="rgba(15, 23, 42, 0.08)" strokeWidth="1"></path>
+            </pattern>
+          </defs>
+          <path fill="var(--tamu-maroon)" d="M0,40 C240,100 480,0 720,30 C960,60 1200,110 1440,50 L1440,0 L0,0 Z"></path>
         </svg>
       </section>
 
-      <div className="container" style={{ marginTop: '3rem' }}>
+      <div className="container" style={{ marginTop: '8rem' }}>
         {/* Mission Section */}
         <section id="about" className="card mission-section reveal">
           <div className="mission-container">

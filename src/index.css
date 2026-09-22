@@ -67,8 +67,8 @@ body {
   /* Light technical grid background */
   background-image: 
     radial-gradient(circle at 50% 0%, rgba(80, 0, 0, 0.06) 0%, transparent 65%),
-    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.08) 1px, transparent 1px);
   background-size: 100% 100%, 36px 36px, 36px 36px;
   background-attachment: fixed;
 }
@@ -579,8 +579,19 @@ nav {
   left: 0;
   width: 100%;
   height: 70px;
-  fill: var(--bg-dark);
   z-index: 5;
+  pointer-events: none;
+}
+
+.about-hero-split,
+.contact-hero-split {
+  overflow: visible;
+  margin-bottom: 70px;
+}
+
+.about-hero-split .hero-wave-divider,
+.contact-hero-split .hero-wave-divider {
+  bottom: -70px;
 }
 
 .hero-bg {
@@ -942,12 +953,30 @@ nav {
    ========================================================================== */
 .telemetry-bar-section {
   position: relative;
-  background: var(--tamu-maroon);
+  background: transparent;
   margin-top: -50px;
-  padding: calc(2.25rem + 50px) 0 calc(2.25rem + 50px);
-  clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+  margin-bottom: 70px;
+  padding: calc(2.25rem + 50px) 0 2.25rem;
   color: #ffffff;
-  overflow: hidden;
+  overflow: visible;
+}
+
+.telemetry-bar-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--tamu-maroon);
+  clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.telemetry-bar-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.telemetry-bar-section .hero-wave-divider {
+  bottom: -70px;
 }
 
 .telemetry-grid {
