@@ -201,7 +201,8 @@ export const facultyAdvisor = {
 export const sponsorsData = {
   gold: [
     { name: 'Texas A&M Civil and Environmental Engineering', image: '/assets/sponsorship_images/CVEN_DEPT.png', url: 'https://engineering.tamu.edu/civil/index.html' },
-    { name: 'Moses B. Glick', image: '/assets/sponsorship_images/mbglick-logo.png', url: 'https://mbglick.com/' }
+    { name: 'Moses B. Glick', image: '/assets/sponsorship_images/mbglick-logo.png', url: 'https://mbglick.com/' },
+    { name: 'Badger Inc.', image: '/assets/sponsorship_images/badger-logo.png', url: 'https://www.badgerinc.com/solutions/hydrovac-applications/?shem=aimgspe' }
   ],
   silver: [],
   maroon: []

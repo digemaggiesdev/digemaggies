@@ -13,7 +13,7 @@ Built with:
 - Interactive sponsor animations and tiered recognition system
 
 ## License
-This project is licensed under the [MIT License](./LICENSE) © 2025 [Your Name].
+This project is licensed under the [MIT License](./LICENSE) © 2025 [Dig'em Aggies].
 
 ## 🚀 Features
 
